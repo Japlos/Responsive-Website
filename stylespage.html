@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Styles</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body class="html-styles-page">
+  <header>
+    <nav>
+      <h1>HTML Styles</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>  
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>Introduction to HTML Styles</h2>
+      <p>
+        Styling HTML allows you to change the appearance of your webpage. HTML supports several methods for styling content, including inline styles, internal CSS, and external CSS. Each method has its own uses and benefits.
+      </p>
+    </section>
+
+    <section id="inline-styles">
+      <h2>Inline Styles</h2>
+      <p>
+        Inline styles apply directly within an HTML element using the <code>style</code> attribute. This method is useful for quick, one-off styling.
+      </p>
+      <p>Example:</p>
+      <pre>
+        &lt;p style="color: blue; font-size: 20px;"&gt;This is styled text.&lt;/p&gt;
+      </pre>
+    </section>
+
+    <section id="internal-css">
+      <h2>Internal CSS</h2>
+      <p>
+        Internal CSS is defined within the <code>&lt;style&gt;</code> tag inside the <code>&lt;head&gt;</code> section. It is useful for styling a single HTML document with multiple rules.
+      </p>
+      <p>Example:</p>
+      <pre>
+        &lt;style&gt;
+          p {
+            color: green;
+            font-size: 18px;
+          }
+        &lt;/style&gt;
+      </pre>
+    </section>
+
+    <section id="external-css">
+      <h2>External CSS</h2>
+      <p>
+        External CSS uses a separate stylesheet file linked to the HTML document, allowing consistent styling across multiple pages. It is the recommended method for styling a large website.
+      </p>
+      <p>Example link to CSS:</p>
+      <pre>
+        &lt;link rel="stylesheet" href="style.css"&gt;
+      </pre>
+    </section>
+
+    <section id="css-properties">
+      <h2>Common CSS Properties</h2>
+      <h3>Text Styling</h3>
+      <ul>
+        <li><strong>color</strong>: Sets the color of text. <code>color: blue;</code></li>
+        <li><strong>font-size</strong>: Defines the size of text. <code>font-size: 20px;</code></li>
+        <li><strong>font-weight</strong>: Makes text bold. <code>font-weight: bold;</code></li>
+      </ul>
+
+      <h3>Background Styling</h3>
+      <ul>
+        <li><strong>background-color</strong>: Sets the background color. <code>background-color: lightgray;</code></li>
+        <li><strong>background-image</strong>: Adds a background image. <code>background-image: url('image.jpg');</code></li>
+      </ul>
+
+      <h3>Box Model Properties</h3>
+      <ul>
+        <li><strong>padding</strong>: Space inside the element border. <code>padding: 10px;</code></li>
+        <li><strong>margin</strong>: Space outside the element border. <code>margin: 20px;</code></li>
+        <li><strong>border</strong>: Defines the border. <code>border: 1px solid black;</code></li>
+      </ul>
+
+      <div class="button-container">
+        <a href="nextpage.html" class="button button-previous">Previous Page</a>
+        <a href="formatting.html" class="button button-next">Next Page</a>
+      </div>
+      
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Web Development Tutorial</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>JavaScript Functions</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main>
+    <section>
+        <h2>1. What is a JavaScript Function?</h2>
+        <p>A function in JavaScript is a block of code designed to perform a particular task. It is a reusable piece of code that can be called (executed) whenever needed. Functions allow you to structure your program by breaking it into smaller, manageable pieces, making your code more modular and easier to maintain.</p>
+    </section>
+
+    <section>
+        <h2>2. Defining a JavaScript Function</h2>
+        <p>Functions in JavaScript can be defined in several ways. The most common method is using the <code>function</code> keyword followed by the function name, parameters (optional), and the body of the function.</p>
+        
+        <h3>2.1 Function Declaration</h3>
+        <p>In a function declaration, you define a function using the <code>function</code> keyword, followed by the function name, parentheses (which may contain parameters), and a block of code inside curly braces (<code>{}</code>) that represents the body of the function.</p>
+        <pre><code>function greet(name) {
+    console.log("Hello, " + name);
+}</code></pre>
+        <p>In the example above, the function <code>greet</code> accepts one parameter <code>name</code> and outputs a greeting message to the console.</p>
+
+        <h3>2.2 Function Expression</h3>
+        <p>A function expression defines a function inside an expression. This can be assigned to a variable. Function expressions are useful when you want to pass functions as arguments or when using anonymous functions.</p>
+        <pre><code>const greet = function(name) {
+    console.log("Hello, " + name);
+};</code></pre>
+        <p>Here, the function is assigned to the variable <code>greet</code> and can be invoked the same way as a function declared using a function declaration.</p>
+
+        <h3>2.3 Arrow Function</h3>
+        <p>Arrow functions provide a more concise way to write functions. They were introduced in ES6 (ECMAScript 2015) and have a shorter syntax compared to regular function expressions. Arrow functions also do not have their own <code>this</code> value, instead inheriting it from the parent scope.</p>
+        <pre><code>const greet = (name) => {
+    console.log("Hello, " + name);
+};</code></pre>
+        <p>This is an equivalent of the function expression from the previous example, but it uses arrow function syntax.</p>
+    </section>
+
+    <section>
+        <h2>3. Calling a Function</h2>
+        <p>Once a function is defined, it can be called (invoked) by using its name followed by parentheses. If the function accepts parameters, the arguments are passed inside the parentheses.</p>
+        
+        <pre><code>greet("Alice"); // Outputs: "Hello, Alice"</code></pre>
+        <p>In this example, we are calling the <code>greet</code> function and passing the string "Alice" as the argument.</p>
+    </section>
+
+    <section>
+        <h2>4. Function Parameters and Arguments</h2>
+        <p>Functions can accept input values, called parameters. When you call a function, you provide arguments for the parameters. These arguments can be of any data type such as numbers, strings, arrays, objects, etc.</p>
+
+        <h3>4.1 Default Parameters</h3>
+        <p>In JavaScript, you can assign default values to function parameters. If the argument is not provided when the function is called, the default value will be used.</p>
+        <pre><code>function greet(name = "Guest") {
+    console.log("Hello, " + name);
+}
+
+greet();        // Outputs: "Hello, Guest"
+greet("Alice"); // Outputs: "Hello, Alice"</code></pre>
+        <p>In the example above, if the <code>name</code> argument is not provided, the default value of "Guest" is used.</p>
+
+        <h3>4.2 Rest Parameters</h3>
+        <p>Rest parameters allow you to pass a variable number of arguments to a function. The rest parameter is prefixed with the <code>...</code> syntax and is represented as an array.</p>
+        <pre><code>function sum(...numbers) {
+    let total = 0;
+    for (let number of numbers) {
+        total += number;
+    }
+    return total;
+}
+
+console.log(sum(1, 2, 3)); // Outputs: 6</code></pre>
+        <p>In this example, the <code>sum</code> function takes a variable number of arguments and returns their sum.</p>
+    </section>
+
+    <section>
+        <h2>5. Return Statement</h2>
+        <p>The <code>return</code> statement is used to return a value from a function. Once a return statement is encountered, the function exits, and the value is sent back to the caller.</p>
+
+        <pre><code>function add(a, b) {
+    return a + b;
+}
+
+let result = add(2, 3); // result will be 5</code></pre>
+        <p>In this example, the function <code>add</code> returns the sum of two numbers. The result is stored in the variable <code>result</code>.</p>
+    </section>
+
+    <section>
+        <h2>6. Function Scope</h2>
+        <p>Scope in JavaScript refers to the accessibility of variables and functions. A function has its own local scope, which means variables defined inside a function are not accessible outside of it.</p>
+
+        <h3>6.1 Local Scope</h3>
+        <p>Variables declared inside a function are only accessible within that function.</p>
+        <pre><code>function greet() {
+    let message = "Hello, world!";
+    console.log(message); // Outputs: "Hello, world!"
+}
+
+console.log(message); // Error: message is not defined</code></pre>
+
+        <h3>6.2 Global Scope</h3>
+        <p>Variables declared outside of a function are accessible anywhere in the code, which is known as the global scope.</p>
+        <pre><code>let message = "Hello, world!";
+
+function greet() {
+    console.log(message); // Outputs: "Hello, world!"
+}
+
+greet(); // Outputs: "Hello, world!"</code></pre>
+    </section>
+
+    <section>
+        <h2>7. Function Expressions vs Function Declarations</h2>
+        <p>Function declarations and function expressions are two ways to define functions in JavaScript. Below are the key differences:</p>
+
+        <h3>7.1 Function Declaration</h3>
+        <p>A function declaration is hoisted to the top of its scope. This means the function can be called before its definition.</p>
+        <pre><code>greet(); // Works, because function declarations are hoisted
+
+function greet() {
+    console.log("Hello!");
+}</code></pre>
+
+        <h3>7.2 Function Expression</h3>
+        <p>Function expressions are not hoisted. The function can only be called after its definition.</p>
+        <pre><code>greet(); // Error: greet is not a function
+
+const greet = function() {
+    console.log("Hello!");
+};</code></pre>
+    </section>
+
+    <section>
+        <h2>8. Anonymous Functions</h2>
+        <p>Anonymous functions are functions that do not have a name. They are often used in places where a function is required as an argument, such as in callbacks or event handlers.</p>
+        <pre><code>setTimeout(function() {
+    console.log("This message will be displayed after 1 second.");
+}, 1000);</code></pre>
+    </section>
+
+    <section>
+        <h2>9. Callback Functions</h2>
+        <p>Callback functions are functions that are passed into another function as an argument and are executed at a later time. They are often used with asynchronous code such as event handlers, timeouts, and AJAX requests.</p>
+        <pre><code>function fetchData(callback) {
+    setTimeout(function() {
+        console.log("Data fetched!");
+        callback();
+    }, 1000);
+}
+
+fetchData(function() {
+    console.log("Callback executed!");
+});</code></pre>
+        <p>In this example, the function <code>fetchData</code> accepts a callback function that is executed after the "data is fetched" message is logged.</p>
+    </section>
+
+    <div class="button-container">
+      <a href="operators.html" class="button button-previous">Previous Page</a>
+      <a href="object.html" class="button button-next">Next Page</a>
+    </div>
+  
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2024 Web Development Tutorial</p>
+    </footer>
+
+</body>
+</html>

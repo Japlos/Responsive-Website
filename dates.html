@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dates, Formats, and Methods</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header>
+      <nav>
+        <h1>JavaScript Dates, Formats, and Methods</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+    <section>
+        <h2>1. JavaScript Dates</h2>
+        <p>The <strong>Date</strong> object in JavaScript is used to work with dates and times. It allows you to get the current date and time, manipulate it, and format it in various ways.</p>
+
+        <h3>1.1. Creating Dates</h3>
+        <p>There are several ways to create a <code>Date</code> object:</p>
+
+        <ul>
+            <li><strong>Current Date and Time:</strong> To create a <code>Date</code> object that represents the current date and time, use <code>new Date()</code>.</li>
+            <pre><code>const currentDate = new Date();</code></pre>
+
+            <li><strong>Specific Date:</strong> To create a date for a specific time, pass individual components like year, month, day, etc. Remember, months are 0-indexed (January = 0, December = 11).</li>
+            <pre><code>const specificDate = new Date(2024, 10, 5); // November 5, 2024</code></pre>
+
+            <li><strong>Date from String:</strong> You can create a <code>Date</code> object from a date string in various formats, such as ISO 8601.</li>
+            <pre><code>const dateFromString = new Date("2024-11-05T12:00:00Z");</code></pre>
+
+            <li><strong>Milliseconds since Epoch:</strong> To create a date from milliseconds since January 1, 1970 (the Unix epoch), you can pass a number representing the milliseconds.</li>
+            <pre><code>const dateFromMilliseconds = new Date(1668760800000);</code></pre>
+        </ul>
+
+        <h3>1.2. Working with Dates</h3>
+        <p>Once you have a <code>Date</code> object, you can perform operations such as getting the current year, month, day, and more.</p>
+
+        <ul>
+            <li><strong>Get Current Year:</strong> Use the <code>getFullYear()</code> method.</li>
+            <pre><code>const year = currentDate.getFullYear();</code></pre>
+
+            <li><strong>Get Current Month:</strong> Use the <code>getMonth()</code> method (returns a zero-indexed month).</li>
+            <pre><code>const month = currentDate.getMonth();</code></pre>
+
+            <li><strong>Get Current Day:</strong> Use the <code>getDate()</code> method to get the day of the month.</li>
+            <pre><code>const day = currentDate.getDate();</code></pre>
+
+            <li><strong>Get Day of the Week:</strong> Use the <code>getDay()</code> method (returns 0 for Sunday, 6 for Saturday).</li>
+            <pre><code>const dayOfWeek = currentDate.getDay();</code></pre>
+
+            <li><strong>Get Hours, Minutes, Seconds, Milliseconds:</strong> Use methods like <code>getHours()</code>, <code>getMinutes()</code>, etc.</li>
+            <pre><code>const hours = currentDate.getHours();</code></pre>
+            <pre><code>const minutes = currentDate.getMinutes();</code></pre>
+            <pre><code>const seconds = currentDate.getSeconds();</code></pre>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. JavaScript Date Formats</h2>
+        <p>JavaScript allows various ways to format and display dates. Some common formats include:</p>
+
+        <ul>
+            <li><strong>ISO 8601 Format:</strong> This format follows the pattern <code>YYYY-MM-DDTHH:mm:ss.sssZ</code> and is commonly used for machine-readable date strings.</li>
+            <pre><code>const isoString = currentDate.toISOString();</code></pre>
+
+            <li><strong>Locale-Specific Format:</strong> The <code>toLocaleString()</code> method returns a string in the format suitable for the current locale.</li>
+            <pre><code>const localeString = currentDate.toLocaleString();</code></pre>
+
+            <li><strong>Short Date Format:</strong> Use <code>toLocaleDateString()</code> to get the date in a localized short format.</li>
+            <pre><code>const shortDate = currentDate.toLocaleDateString();</code></pre>
+
+            <li><strong>Short Time Format:</strong> Use <code>toLocaleTimeString()</code> to get the time in a localized short format.</li>
+            <pre><code>const shortTime = currentDate.toLocaleTimeString();</code></pre>
+
+            <li><strong>UTC Format:</strong> The <code>toUTCString()</code> method returns the date in a readable UTC string.</li>
+            <pre><code>const utcString = currentDate.toUTCString();</code></pre>
+
+            <li><strong>Custom Format (via toString()):</strong> The <code>toString()</code> method provides a human-readable string of the date.</li>
+            <pre><code>const dateString = currentDate.toString();</code></pre>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. JavaScript Get and Set Methods</h2>
+        <p>JavaScript provides a variety of <strong>get</strong> and <strong>set</strong> methods to retrieve and modify specific parts of a <code>Date</code> object.</p>
+
+        <h3>3.1. Get Methods</h3>
+        <p>These methods allow you to get individual parts of a date, such as the year, month, day, etc.</p>
+
+        <ul>
+            <li><strong>getFullYear():</strong> Returns the year of the date.</li>
+            <pre><code>const year = currentDate.getFullYear();</code></pre>
+
+            <li><strong>getMonth():</strong> Returns the month (0-11). January is 0, December is 11.</li>
+            <pre><code>const month = currentDate.getMonth();</code></pre>
+
+            <li><strong>getDate():</strong> Returns the day of the month (1-31).</li>
+            <pre><code>const day = currentDate.getDate();</code></pre>
+
+            <li><strong>getDay():</strong> Returns the day of the week (0-6), where 0 is Sunday.</li>
+            <pre><code>const weekday = currentDate.getDay();</code></pre>
+
+            <li><strong>getHours(), getMinutes(), getSeconds(), getMilliseconds():</strong> These methods return the respective time unit values (in the current timezone).</li>
+            <pre><code>const hours = currentDate.getHours();</code></pre>
+
+            <li><strong>getTime():</strong> Returns the number of milliseconds since January 1, 1970 (UTC).</li>
+            <pre><code>const time = currentDate.getTime();</code></pre>
+
+            <li><strong>getTimezoneOffset():</strong> Returns the time zone difference in minutes from UTC.</li>
+            <pre><code>const timezoneOffset = currentDate.getTimezoneOffset();</code></pre>
+        </ul>
+
+        <h3>3.2. Set Methods</h3>
+        <p>These methods allow you to modify specific parts of a date.</p>
+
+        <ul>
+            <li><strong>setFullYear(year, month, day):</strong> Sets the year, month, and day.</li>
+            <pre><code>currentDate.setFullYear(2025);</code></pre>
+
+            <li><strong>setMonth(month, day):</strong> Sets the month and optionally the day.</li>
+            <pre><code>currentDate.setMonth(5, 15);</code></pre>
+
+            <li><strong>setDate(day):</strong> Sets the day of the month.</li>
+            <pre><code>currentDate.setDate(10);</code></pre>
+
+            <li><strong>setHours(hours, minutes, seconds, milliseconds):</strong> Sets the hour, minute, second, and millisecond values.</li>
+            <pre><code>currentDate.setHours(9, 30, 0, 0);</code></pre>
+
+            <li><strong>setMinutes(minutes, seconds, milliseconds):</strong> Sets the minutes, seconds, and milliseconds.</li>
+            <pre><code>currentDate.setMinutes(45, 0, 0);</code></pre>
+
+            <li><strong>setSeconds(seconds, milliseconds):</strong> Sets the seconds and milliseconds.</li>
+            <pre><code>currentDate.setSeconds(30, 500);</code></pre>
+
+            <li><strong>setMilliseconds(milliseconds):</strong> Sets the milliseconds.</li>
+            <pre><code>currentDate.setMilliseconds(250);</code></pre>
+
+            <li><strong>setTime(milliseconds):</strong> Sets the date and time using the number of milliseconds since January 1, 1970 (UTC).</li>
+            <pre><code>currentDate.setTime(1668760800000);</code></pre>
+        </ul>
+    </section>
+
+    <div class="button-container">
+      <a href="array.html" class="button button-previous">Previous Page</a>
+      <a href="debugging.html" class="button button-next">Next Page</a>
+    </div>
+  
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2024 Web Development Tutorial</p>
+    </footer>
+
+
+</body>
+</html>

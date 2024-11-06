@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow, Z-index, and Float</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>CSS Overflow, Z-index, and Float</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main>
+    <section>
+        <h2>1. CSS Overflow</h2>
+        <p>The <code>overflow</code> property in CSS controls what happens when content overflows an element's box. 
+          This property is used when the content inside an element is too large to fit into the specified dimensions (width and height).
+           The overflow property can help manage how the extra content is displayed or hidden.</p>
+
+        <h3>Possible Values for Overflow:</h3>
+        <ul>
+            <li><strong>visible:</strong> This is the default value. The overflowed content is visible outside the element's box.</li>
+            <pre><code>div {
+    overflow: visible;
+}</code></pre>
+
+            <li><strong>hidden:</strong> The overflowed content is clipped, and no scrollbars are provided to view the hidden content.</li>
+            <pre><code>div {
+    overflow: hidden;
+}</code></pre>
+
+            <li><strong>scroll:</strong> The overflowed content will be clipped, but scrollbars will appear to allow the user to scroll and view the content.</li>
+            <pre><code>div {
+    overflow: scroll;
+}</code></pre>
+
+            <li><strong>auto:</strong> The browser will automatically add scrollbars if the content overflows the element's box. This is the most commonly used value for scrollable content.</li>
+            <pre><code>div {
+    overflow: auto;
+}</code></pre>
+
+            <li><strong>overflow-x:</strong> Specifies the overflow behavior on the horizontal axis (left-to-right).</li>
+            <pre><code>div {
+    overflow-x: scroll;
+}</code></pre>
+
+            <li><strong>overflow-y:</strong> Specifies the overflow behavior on the vertical axis (top-to-bottom).</li>
+            <pre><code>div {
+    overflow-y: hidden;
+}</code></pre>
+        </ul>
+
+        <h3>Example of Overflow Usage:</h3>
+        <pre><code>div {
+    width: 200px;
+    height: 100px;
+    overflow: auto;
+}</code></pre>
+        <p>This example creates a <code>&lt;div&gt;</code> with a fixed width and height. If the content inside the <code>&lt;div&gt;</code> exceeds these dimensions, scrollbars will appear to allow the user to scroll and view the overflowed content.</p>
+    </section>
+
+    <section>
+        <h2>2. CSS Z-index</h2>
+        <p>The <code>z-index</code> property in CSS is used to control the stacking order of elements that overlap. It determines which elements appear in front and which ones are stacked behind others. Elements with a higher <code>z-index</code> value are displayed in front of those with a lower value.</p>
+
+        <h3>Key Points about Z-index:</h3>
+        <ul>
+            <li><strong>Default Value:</strong> The default value of <code>z-index</code> is <code>auto</code>, meaning the stacking order is based on the order in which elements appear in the HTML.</li>
+            <pre><code>div {
+    z-index: auto;
+}</code></pre>
+
+            <li><strong>Positive Values:</strong> A positive <code>z-index</code> will place the element above elements with a lower <code>z-index</code> value. The higher the number, the closer the element is to the front.</li>
+            <pre><code>div {
+    position: absolute;
+    z-index: 10;
+}</code></pre>
+
+            <li><strong>Negative Values:</strong> A negative <code>z-index</code> will place the element below elements with a higher <code>z-index</code> value.</li>
+            <pre><code>div {
+    position: absolute;
+    z-index: -1;
+}</code></pre>
+
+            <li><strong>z-index and Positioning:</strong> For <code>z-index</code> to work, the element must have a positioning value other than <code>static</code> (e.g., <code>relative</code>, <code>absolute</code>, or <code>fixed</code>).</li>
+            <pre><code>div {
+    position: relative;
+    z-index: 5;
+}</code></pre>
+        </ul>
+
+        <h3>Example of Z-index Usage:</h3>
+        <pre><code>div {
+    position: absolute;
+    z-index: 10;
+}
+
+p {
+    position: absolute;
+    z-index: 5;
+}</code></pre>
+        <p>This example positions two elements absolutely on the page. The <code>&lt;div&gt;</code> will appear above the <code>&lt;p&gt;</code> element because it has a higher <code>z-index</code>.</p>
+    </section>
+
+    <section>
+        <h2>3. CSS Float</h2>
+        <p>The <code>float</code> property in CSS is used to place elements to the left or right of their containing block, allowing other content to wrap around them. Floats are typically used for layouts, like positioning images next to text. However, they can be tricky to use correctly, and modern layout techniques like Flexbox and Grid are often preferred over floats.</p>
+
+        <h3>Float Values:</h3>
+        <ul>
+            <li><strong>left:</strong> This value positions the element to the left of its containing block, allowing text or other elements to wrap around it on the right.</li>
+            <pre><code>img {
+    float: left;
+}</code></pre>
+
+            <li><strong>right:</strong> This value positions the element to the right of its containing block, allowing text or other elements to wrap around it on the left.</li>
+            <pre><code>img {
+    float: right;
+}</code></pre>
+
+            <li><strong>none:</strong> This value cancels any floating behavior, and the element will be positioned according to the normal document flow.</li>
+            <pre><code>img {
+    float: none;
+}</code></pre>
+
+            <li><strong>clear:</strong> The <code>clear</code> property is used to control the behavior of elements around floating elements. It is commonly used to prevent elements from wrapping around a float.</li>
+            <pre><code>p {
+    clear: both;
+}</code></pre>
+        </ul>
+
+        <h3>Example of Float Usage:</h3>
+        <pre><code>img {
+    float: left;
+    margin-right: 20px;
+}
+
+p {
+    clear: both;
+}</code></pre>
+        <p>This example positions an image on the left of the container, with text wrapping around it on the right.
+           The <code>clear: both</code> ensures that the <code>&lt;p&gt;</code> element is displayed below any floated elements.</p>
+
+        <div class="button-container">
+          <a href="display.html" class="button button-previous">Previous Page</a>
+          <a href="combinators.html" class="button button-next">Next Page</a>
+        </div>
+        
+      </section>
+    </main>
+    
+      <footer>
+      <p>&copy; 2024 Web Development Tutorial</p>
+      </footer>
+
+</body>
+</html>

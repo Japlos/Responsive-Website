@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Basics</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body class="html-basics-page">
+    <header>
+      <nav>
+        <h1>HTML Basics</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="html-overview">
+        <h2>HTML Overview</h2>
+        <p>
+          HTML (HyperText Markup Language) is the standard markup language used
+          to create web pages. This section covers the foundational concepts of
+          HTML that every beginner should know.
+        </p>
+      </section>
+
+      <section id="basic-tags">
+        <h2>Essential HTML Tags</h2>
+        <p>
+          These tags are the core building blocks of HTML:
+        </p>
+        <ul>
+          <li><strong>&lt;html&gt;:</strong> The root element that defines the document as HTML.</li>
+          <li><strong>&lt;head&gt;:</strong> Contains meta-information, links to stylesheets, etc.</li>
+          <li><strong>&lt;title&gt;:</strong> Specifies the page title shown in the browser tab.</li>
+          <li><strong>&lt;body&gt;:</strong> Holds all visible content on the webpage.</li>
+        </ul>
+      </section>
+
+      <section id="text-formatting">
+        <h2>Text Formatting Tags</h2>
+        <p>Common tags used for text formatting include:</p>
+        <ul>
+          <li><strong>&lt;h1&gt; to &lt;h6&gt;:</strong> Headings, with &lt;h1&gt; as the largest.</li>
+          <li><strong>&lt;p&gt;:</strong> Paragraphs, used for regular text blocks.</li>
+          <li><strong>&lt;strong&gt;:</strong> Bold text to emphasize importance.</li>
+          <li><strong>&lt;em&gt;:</strong> Italic text for emphasis.</li>
+        </ul>
+      </section>
+      
+        <section id="html-images">
+          <h2>HTML Images</h2>
+          <p>
+            The <code>&lt;img&gt;</code> tag is used to embed images in an HTML document. It is a self-closing tag that requires at least the <code>src</code> and <code>alt</code> attributes.
+          </p>
+          <ul>
+            <li><strong>src:</strong> Specifies the path to the image file.</li>
+            <li><strong>alt:</strong> Provides a text alternative if the image cannot be displayed. This is important for accessibility.</li>
+          </ul>
+          <p>Example:</p>
+          <pre>
+          &lt;img src="images/html_logo.png" alt="HTML Logo" width="200" height="200"&gt;
+          </pre>
+          <p>The above example would display an image of the HTML logo if the path is correct.</p>
+        </section>
+      
+        <section id="html-links">
+          <h2>HTML Links</h2>
+          <p>
+            The <code>&lt;a&gt;</code> (anchor) tag creates a hyperlink to other pages, websites, or sections within the same page. The <code>href</code> attribute specifies the destination URL or path.
+          </p>
+          <ul>
+            <li><strong>href:</strong> Defines the link's destination. This can be an external URL or an internal page.</li>
+            <li><strong>target:</strong> Specifies where to open the link. <code>_blank</code> opens it in a new tab.</li>
+          </ul>
+          <p>Example:</p>
+          <pre>
+          &lt;a href="https://www.example.com" target="_blank"&gt;Visit Example Site&lt;/a&gt;
+          </pre>
+          <p>This link will open "https://www.example.com" in a new tab.</p>
+        </section>
+
+      
+      <section id="html-attributes">
+        <h2>Understanding HTML Attributes</h2>
+        <p>
+          Attributes provide additional information about elements. The most common attributes include:
+        </p>
+        <ul>
+          <li><strong>id:</strong> Uniquely identifies an element on a page.</li>
+          <li><strong>class:</strong> Groups elements with similar styling.</li>
+          <li><strong>src:</strong> Specifies the source file for images, audio, or video.</li>
+          <li><strong>href:</strong> Links to another page or section.</li>
+        </ul>
+      </section>
+
+      <section id="html-example">
+        <h2>HTML Structure Example</h2>
+        <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Sample Page&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Hello World&lt;/h1&gt;
+            &lt;p&gt;This is a paragraph in HTML.&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
+
+        <div class="button-container">
+          <a href="htmlintro.html" class="button button-previous">Previous Page</a>
+          <a href="stylespage.html" class="button button-next">Next Page</a>
+        </div>
+
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Web Development Tutorial</p>
+    </footer>
+  </body>
+</html>

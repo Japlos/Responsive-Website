@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Introduction</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    
+    <header>
+      <nav>
+        <h1>CSS Introduction</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+    <section>
+      <h2>1. What is CSS?</h2>
+      <p>
+        CSS (Cascading Style Sheets) is a stylesheet language used to control
+        the presentation, layout, and design of HTML documents. CSS defines how
+        HTML elements should be displayed on screen, paper, or in other media.
+        It is responsible for aspects like colors, fonts, spacing, alignment,
+        and responsiveness of the web page.
+      </p>
+
+      <h3>Purpose of CSS:</h3>
+      <ul>
+        <li>
+          Separation of content and presentation: HTML provides the structure of
+          the document, while CSS is used for styling.
+        </li>
+        <li>
+          Consistency: CSS allows for consistent styling across multiple pages
+          of a website.
+        </li>
+        <li>
+          Improves maintainability: With CSS, changes can be made in one place
+          (the stylesheet) rather than editing individual HTML elements.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. CSS Syntax</h2>
+      <p>
+        CSS follows a specific syntax to apply styles to HTML elements. The
+        basic structure of a CSS rule consists of a selector and a declaration
+        block:
+      </p>
+
+      <h3>Basic Syntax:</h3>
+      <pre><code>selector {
+    property: value;
+}</code></pre>
+
+      <p>
+        The selector is used to target the HTML element, and the declaration
+        block contains the property and its corresponding value.
+      </p>
+
+      <h3>Example:</h3>
+      <pre><code>p {
+    color: red;
+    font-size: 16px;
+}</code></pre>
+      <p>
+        This CSS rule selects all <code>&lt;p&gt;</code> elements and sets their
+        text color to red and font size to 16 pixels.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Types of CSS</h2>
+      <p>
+        CSS can be applied to an HTML document in three different ways: Inline
+        CSS, Internal CSS, and External CSS.
+      </p>
+
+      <h3>Inline CSS:</h3>
+      <p>
+        Inline CSS is applied directly within an HTML element using the
+        <code>style</code> attribute.
+      </p>
+      <pre><code>&lt;p style="color: blue; font-size: 14px;"&gt;This is a paragraph with inline CSS.&lt;/p&gt;</code></pre>
+
+      <h3>Internal CSS:</h3>
+      <p>
+        Internal CSS is placed inside a <code>&lt;style&gt;</code> element
+        within the <code>&lt;head&gt;</code> section of an HTML document.
+      </p>
+      <pre><code>&lt;style&gt;
+    p {
+        color: green;
+        font-size: 18px;
+    }
+&lt;/style&gt;</code></pre>
+
+      <h3>External CSS:</h3>
+      <p>
+        External CSS is written in a separate .css file and linked to the HTML
+        document using the <code>&lt;link&gt;</code> element.
+      </p>
+      <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+      <p>
+        External CSS is the preferred method for larger projects because it
+        allows for easier maintenance and faster page loading (due to caching).
+      </p>
+    </section>
+
+    <section>
+      <h2>4. CSS Selectors</h2>
+      <p>
+        CSS selectors are used to target specific HTML elements to apply styles.
+        Here are some common types of selectors:
+      </p>
+
+      <h3>Universal Selector:</h3>
+      <p>
+        The universal selector <code>*</code> selects all elements on a page.
+      </p>
+      <pre><code>* {
+    color: black;
+}</code></pre>
+
+      <h3>Type Selector (Element Selector):</h3>
+      <p>The type selector targets elements based on their tag name.</p>
+      <pre><code>h1 {
+    font-size: 24px;
+}</code></pre>
+
+      <h3>Class Selector:</h3>
+      <p>
+        The class selector selects elements with a specific class attribute.
+        Class selectors are prefixed with a period (<code>.</code>) and can be
+        applied to multiple elements.
+      </p>
+      <pre><code>.class-name {
+    color: blue;
+}</code></pre>
+
+      <h3>ID Selector:</h3>
+      <p>
+        The ID selector selects elements with a specific id attribute. ID
+        selectors are prefixed with a hash (<code>#</code>) and should be unique
+        within a page.
+      </p>
+      <pre><code>#id-name {
+    font-size: 20px;
+}</code></pre>
+
+      <h3>Attribute Selector:</h3>
+      <p>Attribute selectors target elements based on their attributes.</p>
+      <pre><code>a[href^="https"] {
+    color: green;
+}</code></pre>
+
+      <h3>Descendant Selector:</h3>
+      <p>
+        A descendant selector targets elements that are inside (nested within) a
+        specified parent element.
+      </p>
+      <pre><code>div p {
+    color: red;
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>5. Common CSS Properties</h2>
+      <p>
+        CSS properties define the style and appearance of HTML elements. Here
+        are some common properties:
+      </p>
+
+      <h3>Color and Background:</h3>
+      <ul>
+        <li><code>color</code>: Sets the text color.</li>
+        <li>
+          <code>background-color</code>: Sets the background color of an
+          element.
+        </li>
+        <li>
+          <code>background-image</code>: Sets an image as the background of an
+          element.
+        </li>
+        <li>
+          <code>opacity</code>: Defines the transparency level of an element.
+        </li>
+      </ul>
+
+      <h3>Text and Font:</h3>
+      <ul>
+        <li><code>font-family</code>: Specifies the font type.</li>
+        <li><code>font-size</code>: Defines the size of the text.</li>
+        <li>
+          <code>font-weight</code>: Sets the weight (boldness) of the text.
+        </li>
+        <li>
+          <code>line-height</code>: Specifies the height of each line of text.
+        </li>
+        <li>
+          <code>text-align</code>: Aligns the text (left, right, center,
+          justify).
+        </li>
+      </ul>
+
+      <h3>Spacing and Box Model:</h3>
+      <ul>
+        <li>
+          <code>margin</code>: Creates space outside the border of an element.
+        </li>
+        <li>
+          <code>padding</code>: Creates space inside the border of an element.
+        </li>
+        <li><code>border</code>: Defines the border around an element.</li>
+        <li><code>width</code>: Specifies the width of an element.</li>
+        <li><code>height</code>: Specifies the height of an element.</li>
+      </ul>
+
+      <h3>Positioning:</h3>
+      <ul>
+        <li>
+          <code>position</code>: Specifies how an element is positioned (static,
+          relative, absolute, fixed, sticky).
+        </li>
+        <li>
+          <code>top</code>, <code>right</code>, <code>bottom</code>,
+          <code>left</code>: Define the position of an element when
+          <code>position</code> is set to something other than
+          <code>static</code>.
+        </li>
+      </ul>
+
+      <h3>Display and Visibility:</h3>
+      <ul>
+        <li>
+          <code>display</code>: Defines how an element is displayed (block,
+          inline, inline-block, none).
+        </li>
+        <li>
+          <code>visibility</code>: Specifies whether an element is visible or
+          hidden, but it still takes up space on the page.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. CSS Box Model</h2>
+      <p>
+        The CSS Box Model defines the rectangular boxes generated for elements
+        and consists of the following parts:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Content:</strong> The actual content of the element (text,
+          images, etc.).
+        </li>
+        <li>
+          <strong>Padding:</strong> The space between the content and the
+          border.
+        </li>
+        <li>
+          <strong>Border:</strong> The border surrounding the padding (if
+          defined).
+        </li>
+        <li>
+          <strong>Margin:</strong> The space outside the border, separating the
+          element from other elements.
+        </li>
+      </ul>
+      <p>
+        It's important to understand the box model because it affects how
+        elements are sized and how they interact with surrounding elements.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. CSS Media Queries</h2>
+      <p>
+        Media queries are a powerful feature in CSS that allows you to apply
+        different styles based on conditions like screen size, device type, or
+        orientation. Media queries enable responsive web design by making your
+        website adapt to different screen sizes.
+      </p>
+
+      <h3>Basic Syntax of Media Query:</h3>
+      <pre><code>@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}</code></pre>
+      <p>
+        This example applies a font size of 14px to the body element when the
+        screen width is less than or equal to 600px.
+      </p>
+
+      <div class="button-container">
+        <a href="bgcolors.html" class="button button-next">Next Page</a>
+      </div>
+
+    </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Web Development Tutorial</p>
+    </footer>
+
+  </body>
+</html>

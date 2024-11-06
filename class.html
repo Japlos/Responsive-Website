@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Div, Class, ID</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+  <header>
+    <nav>
+      <h1>HTML Div, Class, and ID</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main>
+    <section>
+        <h2>1. HTML Div</h2>
+        <p>The <code>&lt;div&gt;</code> element is a block-level container used to group other HTML elements. It does not add any semantic meaning to the content, but it is useful for applying styles and organizing content into sections.</p>
+
+        <h3>Usage:</h3>
+        <pre><code>&lt;div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Attributes:</h3>
+        <ul>
+            <li><code>class</code> - Specifies one or more class names that can be used by CSS and JavaScript.</li>
+            <li><code>id</code> - Specifies a unique identifier for the <code>&lt;div&gt;</code> element, which can be used by CSS and JavaScript.</li>
+        </ul>
+
+        <h3>Why Use <code>&lt;div&gt;</code>?</h3>
+        <p>The <code>&lt;div&gt;</code> tag is typically used for layout purposes. It allows you to group elements together to apply styles, JavaScript, or create a container for content. Since it is a block-level element, it naturally starts on a new line and takes up the full width available.</p>
+
+        <h3>Example:</h3>
+        <pre><code>&lt;div&gt;
+    &lt;h2&gt;Section Title&lt;/h2&gt;
+    &lt;p&gt;This is some content inside a div element.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+    <section>
+        <h2>2. HTML Class Attribute</h2>
+        <p>The <code>class</code> attribute is used to define one or more class names for an HTML element. These class names can then be referenced in CSS for styling or in JavaScript for manipulation. A single element can have multiple class names, separated by spaces.</p>
+
+        <h3>Usage:</h3>
+        <pre><code>&lt;div class="class1 class2"&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Why Use the <code>class</code> Attribute?</h3>
+        <p>The <code>class</code> attribute allows you to apply styles or JavaScript functions to multiple elements at once. It is a way to target a group of elements without having to target each one individually. A class name can be reused across different elements within the HTML document.</p>
+
+        <h3>Example:</h3>
+        <pre><code>&lt;div class="container"&gt;
+    &lt;p class="highlight"&gt;This paragraph has a class applied.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Multiple Classes:</h3>
+        <p>You can assign multiple class names to an element. This is helpful when an element needs to share styles or behaviors from different CSS classes.</p>
+
+        <pre><code>&lt;div class="box large"&gt;
+    &lt;p&gt;This is a large box.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+    <section>
+        <h2>3. HTML ID Attribute</h2>
+        <p>The <code>id</code> attribute is used to specify a unique identifier for an HTML element. It is important to note that an ID must be unique within a page, meaning no two elements should share the same ID.</p>
+
+        <h3>Usage:</h3>
+        <pre><code>&lt;div id="uniqueElement"&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Why Use the <code>id</code> Attribute?</h3>
+        <p>The <code>id</code> attribute is used for identifying a specific element on the page, which can then be targeted by CSS or JavaScript. Since IDs are unique, they are often used to target individual elements that need special styling or functionality.</p>
+
+        <h3>Example:</h3>
+        <pre><code>&lt;div id="header"&gt;
+    &lt;p&gt;This is the header section with a unique ID.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Using ID in CSS:</h3>
+        <p>IDs are commonly used in CSS selectors to style specific elements. The <code>#</code> symbol is used to target an element by its ID.</p>
+
+        <pre><code>#header {
+    color: blue;
+    font-size: 24px;
+}</code></pre>
+
+        <h3>Using ID in JavaScript:</h3>
+        <p>IDs are also commonly used in JavaScript to select and manipulate specific elements.</p>
+
+        <pre><code>let element = document.getElementById("header");
+element.style.backgroundColor = "yellow";</code></pre>
+    </section>
+
+    <section>
+        <h2>4. Differences Between <code>class</code> and <code>id</code></h2>
+        <p>The <code>class</code> and <code>id</code> attributes are both used to target elements, but they serve different purposes:</p>
+
+        <ul>
+            <li><strong>Class:</strong> 
+                <ul>
+                    <li>Can be reused on multiple elements.</li>
+                    <li>Used to apply the same style or behavior to multiple elements.</li>
+                    <li>Can be used for multiple elements in a page.</li>
+                </ul>
+            </li>
+            <li><strong>ID:</strong> 
+                <ul>
+                    <li>Must be unique on the page.</li>
+                    <li>Used to target a specific, unique element.</li>
+                    <li>Can be used for identifying individual elements (often for JavaScript interactions).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Example of Both <code>class</code> and <code>id</code>:</h3>
+        <pre><code>&lt;div id="mainHeader" class="header large"&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>In this example, the <code>id="mainHeader"</code> uniquely identifies this <code>&lt;div&gt;</code> as the main header, while the <code>class="header large"</code> 
+          allows it to share styles with other elements that also have the "header" or "large" class.</p>
+
+          <div class="button-container">
+            <a href="pagetitle.html" class="button button-previous">Previous Page</a>
+            <a href="javascript.html" class="button button-next">Next Page</a>
+          </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Web Development Tutorial</p>
+  </footer>
+
+</body>
+</html>

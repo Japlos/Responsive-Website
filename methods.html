@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Strings, Methods, Templates, Search, and Numbers</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>JavaScript Strings, Methods, Templates, Search, and Numbers</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+    
+    <main>
+    <section>
+        <h2>1. What is a JavaScript String?</h2>
+        <p>A string in JavaScript is a sequence of characters enclosed within either single quotes (' '), double quotes (" "), or backticks (` `). Strings are used to represent text in JavaScript.</p>
+
+        <h3>1.1 String Declaration</h3>
+        <p>Strings can be declared using single, double, or backticks for template literals.</p>
+        <pre><code>let str1 = "Hello, World!";</code></pre>
+        <pre><code>let str2 = 'Hello, World!';</code></pre>
+        <pre><code>let str3 = `Hello, World!`; // Template literals</code></pre>
+
+        <h3>1.2 String Length</h3>
+        <p>The length of a string can be determined using the <code>length</code> property.</p>
+        <pre><code>let str = "Hello, World!";
+console.log(str.length); // Outputs: 13</code></pre>
+    </section>
+
+    <section>
+        <h2>2. JavaScript String Methods</h2>
+        <p>JavaScript provides a variety of methods that can be used to manipulate strings. Here are some commonly used string methods:</p>
+
+        <h3>2.1 toUpperCase() and toLowerCase()</h3>
+        <p>These methods convert the string to uppercase or lowercase.</p>
+        <pre><code>let str = "hello";
+console.log(str.toUpperCase()); // Outputs: HELLO
+console.log(str.toLowerCase()); // Outputs: hello</code></pre>
+
+        <h3>2.2 indexOf()</h3>
+        <p>Returns the index of the first occurrence of a specified substring. Returns -1 if the substring is not found.</p>
+        <pre><code>let str = "Hello, World!";
+console.log(str.indexOf("World")); // Outputs: 7
+console.log(str.indexOf("JavaScript")); // Outputs: -1</code></pre>
+
+        <h3>2.3 slice()</h3>
+        <p>Extracts a section of a string and returns it as a new string.</p>
+        <pre><code>let str = "Hello, World!";
+console.log(str.slice(0, 5)); // Outputs: Hello</code></pre>
+
+        <h3>2.4 replace()</h3>
+        <p>Replaces a specified value with another value in a string. It only replaces the first occurrence unless a global regular expression is used.</p>
+        <pre><code>let str = "Hello, World!";
+console.log(str.replace("World", "JavaScript")); // Outputs: Hello, JavaScript!</code></pre>
+
+        <h3>2.5 trim()</h3>
+        <p>Removes whitespace from both ends of a string.</p>
+        <pre><code>let str = "   Hello, World!   ";
+console.log(str.trim()); // Outputs: "Hello, World!"</code></pre>
+
+        <h3>2.6 concat()</h3>
+        <p>Combines two or more strings and returns a new string.</p>
+        <pre><code>let str1 = "Hello";
+let str2 = "World!";
+console.log(str1.concat(", ", str2)); // Outputs: Hello, World!</code></pre>
+    </section>
+
+    <section>
+        <h2>3. JavaScript Template Literals</h2>
+        <p>Template literals, introduced in ES6, are string literals that allow embedded expressions and multi-line strings. They are defined using backticks (` `) instead of quotes.</p>
+
+        <h3>3.1 Basic Syntax</h3>
+        <pre><code>let str = `Hello, World!`;
+console.log(str); // Outputs: Hello, World!</code></pre>
+
+        <h3>3.2 String Interpolation</h3>
+        <p>Template literals allow string interpolation, where you can embed variables or expressions inside a string by using ${}.</p>
+        <pre><code>let name = "Alice";
+let greeting = `Hello, ${name}!`;
+console.log(greeting); // Outputs: Hello, Alice!</code></pre>
+
+        <h3>3.3 Multi-line Strings</h3>
+        <p>Template literals can also be used for creating multi-line strings without using escape characters.</p>
+        <pre><code>let str = `Hello,
+World!`;
+console.log(str); // Outputs:
+                  // Hello,
+                  // World! </code></pre>
+    </section>
+
+    <section>
+        <h2>4. JavaScript Search Methods</h2>
+        <p>JavaScript provides various methods to search within strings. The most commonly used methods are:</p>
+
+        <h3>4.1 indexOf()</h3>
+        <p>As mentioned before, <code>indexOf()</code> returns the index of the first occurrence of a specified substring, or -1 if the substring is not found.</p>
+
+        <pre><code>let str = "Hello, World!";
+console.log(str.indexOf("World")); // Outputs: 7</code></pre>
+
+        <h3>4.2 includes()</h3>
+        <p>The <code>includes()</code> method checks if a specified string is present within another string and returns true or false.</p>
+        <pre><code>let str = "Hello, World!";
+console.log(str.includes("World")); // Outputs: true
+console.log(str.includes("JavaScript")); // Outputs: false</code></pre>
+
+        <h3>4.3 search()</h3>
+        <p>The <code>search()</code> method searches for a match between a regular expression and a string. It returns the index of the match or -1 if no match is found.</p>
+        <pre><code>let str = "Hello, World!";
+console.log(str.search("World")); // Outputs: 7</code></pre>
+    </section>
+
+    <section>
+        <h2>5. JavaScript Numbers</h2>
+        <p>In JavaScript, numbers are represented as 64-bit floating-point values. JavaScript supports both integer and floating-point numbers, as well as a variety of methods for performing operations on numbers.</p>
+
+        <h3>5.1 Basic Arithmetic Operations</h3>
+        <p>JavaScript supports basic arithmetic operations such as addition, subtraction, multiplication, division, and modulus (remainder).</p>
+        <pre><code>let x = 10;
+let y = 5;
+console.log(x + y); // Outputs: 15
+console.log(x - y); // Outputs: 5
+console.log(x * y); // Outputs: 50
+console.log(x / y); // Outputs: 2
+console.log(x % y); // Outputs: 0</code></pre>
+
+        <h3>5.2 NaN (Not a Number)</h3>
+        <p>In JavaScript, <code>NaN</code> is a special value that represents "Not a Number". It results from invalid number operations such as dividing zero by zero.</p>
+        <pre><code>console.log(0 / 0); // Outputs: NaN</code></pre>
+
+        <h3>5.3 parseInt() and parseFloat()</h3>
+        <p>These methods are used to convert a string into a number. <code>parseInt()</code> converts a string to an integer, and <code>parseFloat()</code> converts a string to a floating-point number.</p>
+        <pre><code>let str1 = "42";
+let str2 = "42.42";
+
+console.log(parseInt(str1)); // Outputs: 42
+console.log(parseFloat(str2)); // Outputs: 42.42</code></pre>
+
+        <h3>5.4 isNaN()</h3>
+        <p>The <code>isNaN()</code> function checks if a value is NaN. It returns true if the value is NaN, and false otherwise.</p>
+        <pre><code>console.log(isNaN(10)); // Outputs: false
+console.log(isNaN("Hello")); // Outputs: true</code></pre>
+
+        <h3>5.5 Number Methods</h3>
+        <p>There are several built-in methods for working with numbers:</p>
+
+        <h4>5.5.1 toFixed()</h4>
+        <p>Rounds a number to a specified number of decimal places and returns it as a string.</p>
+        <pre><code>let num = 123.456;
+console.log(num.toFixed(2)); // Outputs: 123.46</code></pre>
+
+        <h4>5.5.2 toPrecision()</h4>
+        <p>Formats a number to a specified length (total number of significant digits).</p>
+        <pre><code>let num = 123.456;
+console.log(num.toPrecision(4)); // Outputs: 123.5</code></pre>
+
+        <h4>5.5.3 toString()</h4>
+        <p>Converts a number to a string.</p>
+        <pre><code>let num = 123;
+console.log(num.toString()); // Outputs: "123"</code></pre>
+    </section>
+
+        <div class="button-container">
+          <a href="function.html" class="button button-previous">Previous Page</a>
+          <a href="number.html" class="button button-next">Next Page</a>
+        </div>
+      
+          </section>
+        </main>
+      
+        <footer>
+          <p>&copy; 2024 Web Development Tutorial</p>
+        </footer>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Page Titles, Tables, and Lists</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>HTML Colors, CSS, and Favicon</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+        <h2>1. HTML Page Titles</h2>
+        <p>The <code>&lt;title&gt;</code> tag is used to define the title of an HTML page. The title appears in the browser's title bar or tab and is important for SEO (Search Engine Optimization).</p>
+
+        <h3>Usage:</h3>
+        <pre><code>&lt;head&gt;
+    &lt;title&gt;Your Page Title Here&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+
+        <h3>Important Points:</h3>
+        <ul>
+            <li><strong>Placement:</strong> The <code>&lt;title&gt;</code> tag must be placed within the <code>&lt;head&gt;</code> section of the HTML document.</li>
+            <li><strong>Length:</strong> It is recommended to keep the title between 50-60 characters, as most search engines truncate titles longer than that.</li>
+            <li><strong>Relevance:</strong> The title should be relevant to the content of the page and reflect its main topic.</li>
+            <li><strong>SEO:</strong> Include relevant keywords in the title for better search engine ranking.</li>
+            <li><strong>Uniqueness:</strong> Each page should have a unique title to help differentiate it in search engine results.</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <pre><code>&lt;head&gt;
+    &lt;title&gt;How to Create a Responsive Web Design&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+    </section>
+
+    <section>
+        <h2>2. HTML Tables</h2>
+        <p>HTML tables are used for displaying data in a tabular format, consisting of rows and columns. Tables are created using the <code>&lt;table&gt;</code> element, and each row is represented by the <code>&lt;tr&gt;</code> tag. Each column of data is placed within a <code>&lt;td&gt;</code> (table data) tag, while table headings are represented by <code>&lt;th&gt;</code>.</p>
+
+        <h3>Basic Structure:</h3>
+        <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 1, Column 1&lt;/td&gt;
+        &lt;td&gt;Row 1, Column 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+        <h3>Table Tags:</h3>
+        <ul>
+            <li><code>&lt;table&gt;</code> - Defines the table.</li>
+            <li><code>&lt;tr&gt;</code> - Defines a table row.</li>
+            <li><code>&lt;th&gt;</code> - Defines a table header cell.</li>
+            <li><code>&lt;td&gt;</code> - Defines a table data (cell).</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>$1.00</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>$0.50</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Cherry</td>
+                <td>$2.00</td>
+                <td>15</td>
+            </tr>
+        </table>
+
+        <h3>Additional Table Elements:</h3>
+        <ul>
+            <li><code>&lt;thead&gt;</code> - Groups the header content in a table.</li>
+            <li><code>&lt;tbody&gt;</code> - Groups the body content in a table.</li>
+            <li><code>&lt;tfoot&gt;</code> - Groups the footer content in a table.</li>
+            <li><code>&lt;caption&gt;</code> - Adds a title to the table.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. HTML Lists</h2>
+        <p>HTML lists are used to group items in an ordered (numbered) or unordered (bulleted) manner. There are three types of lists: ordered lists, unordered lists, and definition lists.</p>
+
+        <h3>Unordered List:</h3>
+        <p>An unordered list is used for items that do not have a specific order. It is defined using the <code>&lt;ul&gt;</code> tag, and each item in the list is placed inside an <code>&lt;li&gt;</code> (list item) tag.</p>
+
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <h3>Ordered List:</h3>
+        <p>An ordered list is used when the order of the list items matters. It is created using the <code>&lt;ol&gt;</code> tag, and each list item is placed inside an <code>&lt;li&gt;</code> tag.</p>
+
+        <pre><code>&lt;ol&gt;
+    &lt;li&gt;First step&lt;/li&gt;
+    &lt;li&gt;Second step&lt;/li&gt;
+    &lt;li&gt;Third step&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+        <h3>Definition List:</h3>
+        <p>A definition list is used to describe terms and their definitions. It is created using the <code>&lt;dl&gt;</code> tag. Each term is placed in the <code>&lt;dt&gt;</code> tag, and the definition is placed in the <code>&lt;dd&gt;</code> tag.</p>
+
+        <pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+        <h3>List Styles:</h3>
+        <ul>
+            <li><code>&lt;ul&gt;</code> - Defines an unordered (bulleted) list.</li>
+            <li><code>&lt;ol&gt;</code> - Defines an ordered (numbered) list.</li>
+            <li><code>&lt;li&gt;</code> - Defines a list item (used in both ordered and unordered lists).</li>
+            <li><code>&lt;dl&gt;</code> - Defines a definition list.</li>
+            <li><code>&lt;dt&gt;</code> - Defines a term in a definition list.</li>
+            <li><code>&lt;dd&gt;</code> - Defines a description or definition for a term in a definition list.</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <h4>Unordered List:</h4>
+        <ul>
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Cherries</li>
+        </ul>
+
+        <h4>Ordered List:</h4>
+        <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+
+        <h4>Definition List:</h4>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+        </dl>
+
+        <div class="button-container">
+          <a href="colors.html" class="button button-previous">Previous Page</a>
+          <a href="class.html" class="button button-next">Next Page</a>
+        </div>
+
+    </section>
+  </main>
+    
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects and Properties</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>JavaScript Objects, Properties, Methods, Display, and Constructors</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+    <main>
+    <section>
+        <h2>1. What is a JavaScript Object?</h2>
+        <p>A JavaScript object is a collection of key-value pairs, where each key (also called a property) is a string and the value can be any valid JavaScript data type, including numbers, strings, arrays, other objects, or functions. Objects are fundamental in JavaScript and are used to store and organize data.</p>
+
+        <h3>1.1 Object Syntax</h3>
+        <p>Objects are created using curly braces (<code>{}</code>) and consist of a list of key-value pairs separated by commas. Each key is followed by a colon, then the corresponding value.</p>
+        <pre><code>let person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};</code></pre>
+        <p>In this example, <code>person</code> is an object with three properties: <code>name</code>, <code>age</code>, and <code>city</code>.</p>
+    </section>
+
+    <section>
+        <h2>2. JavaScript Object Properties</h2>
+        <p>Properties are values associated with an object, represented as key-value pairs. The key (also known as the property name) is a string, and the value can be any JavaScript data type.</p>
+
+        <h3>2.1 Accessing Object Properties</h3>
+        <p>Object properties can be accessed in two ways: dot notation or bracket notation.</p>
+
+        <h4>Dot Notation</h4>
+        <pre><code>console.log(person.name); // Outputs: John</code></pre>
+
+        <h4>Bracket Notation</h4>
+        <pre><code>console.log(person["age"]); // Outputs: 30</code></pre>
+
+        <p>Dot notation is preferred for most cases, but bracket notation is useful when the property name is dynamic or contains special characters (e.g., spaces or hyphens).</p>
+
+        <h3>2.2 Modifying Object Properties</h3>
+        <p>Properties can be updated by assigning a new value to the existing property using dot or bracket notation.</p>
+        <pre><code>person.city = "Los Angeles"; // Updates the city property</code></pre>
+
+        <h3>2.3 Adding New Properties</h3>
+        <p>New properties can be added to an object at any time using dot or bracket notation.</p>
+        <pre><code>person.country = "USA"; // Adds a new property 'country'</code></pre>
+        <p>Alternatively, you can use bracket notation for adding properties with special characters in the name:</p>
+        <pre><code>person["postal-code"] = "90001";</code></pre>
+    </section>
+
+    <section>
+        <h2>3. JavaScript Object Methods</h2>
+        <p>Methods are functions that are stored as object properties. Methods are used to perform operations on an object’s data or return a value. You can define a method inside an object just like a property, but instead of a value, you assign a function to the key.</p>
+
+        <h3>3.1 Defining Methods</h3>
+        <p>Methods are defined just like any other property, except that the value is a function. You can define methods using function expressions or shorthand method syntax.</p>
+
+        <pre><code>let person = {
+    name: "John",
+    greet: function() {
+        console.log("Hello, " + this.name);
+    }
+};
+
+person.greet(); // Outputs: Hello, John</code></pre>
+
+        <h3>3.2 Method Shorthand Syntax</h3>
+        <p>Since ES6 (ECMAScript 2015), JavaScript allows a shorthand syntax to define methods inside objects.</p>
+        <pre><code>let person = {
+    name: "John",
+    greet() {
+        console.log("Hello, " + this.name);
+    }
+};
+
+person.greet(); // Outputs: Hello, John</code></pre>
+
+        <p>The <code>this</code> keyword inside the method refers to the object the method belongs to.</p>
+
+        <h3>3.3 Using Methods with Other Objects</h3>
+        <p>Methods can also be used to interact with other objects, including modifying other properties or calling other methods inside the same object.</p>
+        <pre><code>let person = {
+    name: "John",
+    age: 30,
+    greet() {
+        console.log("Hello, " + this.name);
+    },
+    incrementAge() {
+        this.age++;
+    }
+};
+
+person.greet(); // Outputs: Hello, John
+person.incrementAge();
+console.log(person.age); // Outputs: 31</code></pre>
+    </section>
+
+    <section>
+        <h2>4. JavaScript Object Display</h2>
+        <p>To display an object in JavaScript, you can use <code>console.log()</code>, which outputs the object's structure, properties, and values to the console. However, displaying objects directly in the DOM requires converting the object into a string representation.</p>
+
+        <h3>4.1 Displaying Objects in the Console</h3>
+        <pre><code>let person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+
+console.log(person); // Outputs: { name: "John", age: 30, city: "New York" }</code></pre>
+
+        <h3>4.2 Displaying Objects in the DOM</h3>
+        <p>If you want to display the contents of an object on a web page, you need to convert the object into a readable format. One common method is to use <code>JSON.stringify()</code> to convert the object into a string, which can be displayed in the DOM.</p>
+        <pre><code>let person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+
+document.getElementById("output").innerText = JSON.stringify(person);</code></pre>
+        <p>This code converts the <code>person</code> object into a string and displays it in an HTML element with the id <code>output</code>.</p>
+    </section>
+
+    <section>
+        <h2>5. JavaScript Object Constructors</h2>
+        <p>Object constructors are special functions used to create and initialize objects. The constructor function acts as a blueprint for creating objects with the same properties and methods. You can create a new instance of an object by using the <code>new</code> keyword followed by a constructor function.</p>
+
+        <h3>5.1 Creating Objects with a Constructor Function</h3>
+        <p>In JavaScript, you can create an object using a constructor function. The function defines the properties of the object, and you can instantiate objects from the constructor function.</p>
+
+        <pre><code>function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.greet = function() {
+        console.log("Hello, " + this.name);
+    };
+}
+
+let person1 = new Person("John", 30);
+let person2 = new Person("Alice", 25);
+
+person1.greet(); // Outputs: Hello, John
+person2.greet(); // Outputs: Hello, Alice</code></pre>
+
+        <h3>5.2 Constructor Function vs Object Literal</h3>
+        <p>Both constructor functions and object literals can be used to create objects. However, constructor functions are more useful when you need to create multiple instances of objects with the same properties and methods.</p>
+
+        <pre><code>// Object Literal
+let person1 = {
+    name: "John",
+    age: 30,
+    greet: function() {
+        console.log("Hello, " + this.name);
+    }
+};
+
+// Constructor Function
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.greet = function() {
+        console.log("Hello, " + this.name);
+    };
+}
+let person2 = new Person("Alice", 25);</code></pre>
+
+        <h3>5.3 Using the <code>class</code> Syntax (ES6)</h3>
+        <p>ES6 introduced the <code>class</code> syntax, which is a more concise way to define constructor functions. It is a syntactic sugar over JavaScript’s prototype-based inheritance and offers a more object-oriented approach to creating objects.</p>
+
+        <pre><code>class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    greet() {
+        console.log("Hello, " + this.name);
+    }
+}
+
+let person1 = new Person("John", 30);
+let person2 = new Person("Alice", 25);
+
+person1.greet(); // Outputs: Hello, John
+person2.greet(); // Outputs: Hello, Alice</code></pre>
+    </section>
+
+        <div class="button-container">
+          <a href="function.html" class="button button-previous">Previous Page</a>
+          <a href="methods.html" class="button button-next">Next Page</a>
+        </div>
+      
+          </section>
+        </main>
+      
+        <footer>
+          <p>&copy; 2024 Web Development Tutorial</p>
+        </footer>
+
+</body>
+</html>

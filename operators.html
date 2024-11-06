@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators, Arithmetic, and Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header>
+      <nav>
+        <h1>JavaScript Operators, Arithmetic, and Assignment</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+    <section>
+        <h2>1. JavaScript Operators</h2>
+        <p>In JavaScript, operators are special symbols used to perform operations on values and variables. They are categorized into various types, including arithmetic, assignment, comparison, logical, and more. Below are the main categories of operators:</p>
+
+        <h3>1.1 Types of Operators</h3>
+        <ul>
+            <li><strong>Arithmetic Operators:</strong> Used to perform mathematical calculations.</li>
+            <li><strong>Assignment Operators:</strong> Used to assign values to variables.</li>
+            <li><strong>Comparison Operators:</strong> Used to compare two values and return a Boolean value.</li>
+            <li><strong>Logical Operators:</strong> Used to combine multiple conditions.</li>
+            <li><strong>Unary Operators:</strong> Operate on a single operand.</li>
+            <li><strong>Conditional (Ternary) Operator:</strong> A shortcut for an <code>if-else</code> statement.</li>
+            <li><strong>Bitwise Operators:</strong> Perform operations on binary representations of integers.</li>
+            <li><strong>Type Operators:</strong> Used to determine the type of a variable or expression (e.g., <code>typeof</code>).</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Arithmetic Operators</h2>
+        <p>Arithmetic operators are used to perform mathematical operations such as addition, subtraction, multiplication, and division. Below are the arithmetic operators available in JavaScript:</p>
+
+        <h3>2.1 Addition (+)</h3>
+        <p>The <code>+</code> operator adds two operands together.</p>
+        <pre><code>let sum = 5 + 3; // sum will be 8</code></pre>
+
+        <h3>2.2 Subtraction (-)</h3>
+        <p>The <code>-</code> operator subtracts the right operand from the left operand.</p>
+        <pre><code>let difference = 10 - 4; // difference will be 6</code></pre>
+
+        <h3>2.3 Multiplication (*)</h3>
+        <p>The <code>*</code> operator multiplies two operands.</p>
+        <pre><code>let product = 6 * 7; // product will be 42</code></pre>
+
+        <h3>2.4 Division (/)</h3>
+        <p>The <code>/</code> operator divides the left operand by the right operand.</p>
+        <pre><code>let quotient = 20 / 4; // quotient will be 5</code></pre>
+
+        <h3>2.5 Modulus (%)</h3>
+        <p>The <code>%</code> operator returns the remainder of dividing the left operand by the right operand.</p>
+        <pre><code>let remainder = 9 % 4; // remainder will be 1</code></pre>
+
+        <h3>2.6 Exponentiation (**)</h3>
+        <p>The <code>**</code> operator raises the left operand to the power of the right operand.</p>
+        <pre><code>let power = 2 ** 3; // power will be 8 (2 raised to the power of 3)</code></pre>
+
+        <h3>2.7 Increment (++)</h3>
+        <p>The <code>++</code> operator increases the value of a variable by 1.</p>
+        <pre><code>let num = 5;
+num++; // num will be 6 (incremented by 1)</code></pre>
+
+        <h3>2.8 Decrement (--)</h3>
+        <p>The <code>--</code> operator decreases the value of a variable by 1.</p>
+        <pre><code>let num = 5;
+num--; // num will be 4 (decremented by 1)</code></pre>
+    </section>
+
+    <section>
+        <h2>3. Assignment Operators</h2>
+        <p>Assignment operators are used to assign values to variables. In JavaScript, the most commonly used assignment operator is the simple <code>=</code>, but there are several other assignment operators that allow for shorthand operations.</p>
+
+        <h3>3.1 Simple Assignment (=)</h3>
+        <p>The <code>=</code> operator is used to assign a value to a variable.</p>
+        <pre><code>let x = 10; // Assigns the value 10 to the variable 'x'</code></pre>
+
+        <h3>3.2 Addition Assignment (+=)</h3>
+        <p>The <code>+=</code> operator adds the right operand to the left operand and assigns the result to the left operand.</p>
+        <pre><code>let x = 5;
+x += 3; // x will be 8 (5 + 3)</code></pre>
+
+        <h3>3.3 Subtraction Assignment (-=)</h3>
+        <p>The <code>-=</code> operator subtracts the right operand from the left operand and assigns the result to the left operand.</p>
+        <pre><code>let x = 10;
+x -= 4; // x will be 6 (10 - 4)</code></pre>
+
+        <h3>3.4 Multiplication Assignment (*=)</h3>
+        <p>The <code>*=</code> operator multiplies the left operand by the right operand and assigns the result to the left operand.</p>
+        <pre><code>let x = 5;
+x *= 2; // x will be 10 (5 * 2)</code></pre>
+
+        <h3>3.5 Division Assignment (/=)</h3>
+        <p>The <code>/=</code> operator divides the left operand by the right operand and assigns the result to the left operand.</p>
+        <pre><code>let x = 10;
+x /= 2; // x will be 5 (10 / 2)</code></pre>
+
+        <h3>3.6 Modulus Assignment (%=)</h3>
+        <p>The <code>%=</code> operator calculates the remainder of dividing the left operand by the right operand and assigns the result to the left operand.</p>
+        <pre><code>let x = 10;
+x %= 3; // x will be 1 (10 % 3)</code></pre>
+
+        <h3>3.7 Exponentiation Assignment (**=)</h3>
+        <p>The <code>**=</code> operator raises the left operand to the power of the right operand and assigns the result to the left operand.</p>
+        <pre><code>let x = 2;
+x **= 3; // x will be 8 (2 raised to the power of 3)</code></pre>
+    </section>
+
+    <section>
+        <h2>4. JavaScript Operator Precedence</h2>
+        <p>Operator precedence determines the order in which operators are evaluated in an expression. Arithmetic operators have different levels of precedence, with some being evaluated before others. For example, multiplication and division have a higher precedence than addition and subtraction.</p>
+
+        <h3>4.1 Example of Operator Precedence:</h3>
+        <pre><code>let result = 5 + 3 * 2; 
+// result will be 11 because multiplication has higher precedence than addition</code></pre>
+
+        <h3>4.2 Parentheses</h3>
+        <p>You can override operator precedence by using parentheses, ensuring that certain operations are performed first.</p>
+        <pre><code>let result = (5 + 3) * 2; 
+// result will be 16 because the addition inside the parentheses is evaluated first</code></pre>
+
+  <div class="button-container">
+    <a href="output.html" class="button button-previous">Previous Page</a>
+    <a href="function.html" class="button button-next">Next Page</a>
+  </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Web Development Tutorial</p>
+  </footer>
+
+</body>
+</html>

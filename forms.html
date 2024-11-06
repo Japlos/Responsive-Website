@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+  <header>
+    <nav>
+      <h1>HTML Forms</h1>
+  </header>
+
+    <main>
+    <section>
+        <h2>1. Introduction to HTML Forms</h2>
+        <p>Forms are essential for gathering user input on web pages. HTML provides a variety of form elements such as text fields, radio buttons, checkboxes, submit buttons, and more. Forms can be used for tasks like signing up for an account, filling out surveys, or submitting feedback.</p>
+        
+        <h3>Basic Form Structure:</h3>
+        <pre><code>&lt;form action="submit_form.php" method="post"&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</code></pre>
+
+        <p>The <code>&lt;form&gt;</code> element wraps the entire form and specifies how the data will be sent to the server. It has two key attributes:</p>
+        <ul>
+            <li><strong>action:</strong> The URL where the form data will be sent.</li>
+            <li><strong>method:</strong> The HTTP method (usually <code>GET</code> or <code>POST</code>) used to send the form data.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Form Elements</h2>
+        <p>HTML forms contain different types of input elements that allow users to enter data. Here are some common form elements:</p>
+        
+        <h3>Text Input Fields:</h3>
+        <p>The <code>&lt;input&gt;</code> element is used to create various types of input fields, such as text boxes, radio buttons, checkboxes, etc.</p>
+        <pre><code>&lt;input type="text" name="username" placeholder="Enter your username"&gt;</code></pre>
+
+        <h3>Password Field:</h3>
+        <p>The password input type is used to hide the characters typed by the user.</p>
+        <pre><code>&lt;input type="password" name="password" placeholder="Enter your password"&gt;</code></pre>
+
+        <h3>Email Input:</h3>
+        <p>The <code>type="email"</code> input is used for email address fields, which may have built-in validation for proper email format.</p>
+        <pre><code>&lt;input type="email" name="email" placeholder="Enter your email"&gt;</code></pre>
+
+        <h3>Submit Button:</h3>
+        <p>The <code>&lt;input&gt;</code> element can also create a submit button that sends the form data to the server.</p>
+        <pre><code>&lt;input type="submit" value="Submit"&gt;</code></pre>
+        
+        <h3>Text Area:</h3>
+        <p>The <code>&lt;textarea&gt;</code> element allows the user to enter multi-line text.</p>
+        <pre><code>&lt;textarea name="message" rows="4" cols="50"&gt;&lt;/textarea&gt;</code></pre>
+
+        <h3>Checkboxes:</h3>
+        <p>Checkboxes allow users to select multiple options.</p>
+        <pre><code>&lt;input type="checkbox" name="subscribe" value="yes"&gt; Subscribe to newsletter&lt;/input&gt;</code></pre>
+
+        <h3>Radio Buttons:</h3>
+        <p>Radio buttons are used when you want the user to select only one option from a set of choices.</p>
+        <pre><code>&lt;input type="radio" name="gender" value="male"&gt; Male&lt;/input&gt;
+&lt;input type="radio" name="gender" value="female"&gt; Female&lt;/input&gt;</code></pre>
+
+        <h3>Dropdown Menu (Select):</h3>
+        <p>A <code>&lt;select&gt;</code> dropdown allows users to choose from multiple options.</p>
+        <pre><code>&lt;select name="country"&gt;
+    &lt;option value="usa"&gt;USA&lt;/option&gt;
+    &lt;option value="uk"&gt;UK&lt;/option&gt;
+    &lt;option value="canada"&gt;Canada&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+    </section>
+
+    <section>
+        <h2>3. Form Attributes</h2>
+        <p>Form elements have various attributes that determine their behavior and appearance. Below are some of the most commonly used attributes for form elements:</p>
+        
+        <h3>Name Attribute:</h3>
+        <p>The <code>name</code> attribute is essential for form submission, as it defines the key that is sent along with the value to the server.</p>
+        <pre><code>&lt;input type="text" name="username"&gt;</code></pre>
+
+        <h3>Value Attribute:</h3>
+        <p>The <code>value</code> attribute is used to define the default value for input elements, such as text fields or buttons.</p>
+        <pre><code>&lt;input type="submit" value="Submit"&gt;</code></pre>
+
+        <h3>Placeholder Attribute:</h3>
+        <p>The <code>placeholder</code> attribute is used to provide a short hint that describes the expected value of an input field.</p>
+        <pre><code>&lt;input type="text" name="username" placeholder="Enter your username"&gt;</code></pre>
+
+        <h3>Required Attribute:</h3>
+        <p>The <code>required</code> attribute specifies that the user must fill out the field before submitting the form.</p>
+        <pre><code>&lt;input type="text" name="username" required&gt;</code></pre>
+        
+        <h3>Disabled Attribute:</h3>
+        <p>The <code>disabled</code> attribute prevents the user from interacting with the form element.</p>
+        <pre><code>&lt;input type="text" name="username" disabled&gt;</code></pre>
+
+        <h3>Readonly Attribute:</h3>
+        <p>The <code>readonly</code> attribute makes a text field uneditable but still selectable.</p>
+        <pre><code>&lt;input type="text" name="username" readonly&gt;</code></pre>
+    </section>
+
+    <section>
+        <h2>4. Handling Form Data</h2>
+        <p>Form data can be submitted to the server using the <code>action</code> and <code>method</code> attributes of the <code>&lt;form&gt;</code> element. There are two common HTTP methods for submitting form data:</p>
+        
+        <h3>GET Method:</h3>
+        <p>The <code>GET</code> method appends form data to the URL, which is visible in the address bar of the browser. It is typically used for non-sensitive data or search queries.</p>
+        <pre><code>&lt;form action="submit_form.php" method="get"&gt;</code></pre>
+
+        <h3>POST Method:</h3>
+        <p>The <code>POST</code> method sends form data in the body of the request, making it more secure and suitable for sensitive data (such as passwords).</p>
+        <pre><code>&lt;form action="submit_form.php" method="post"&gt;</code></pre>
+    </section>
+
+    <section>
+        <h2>5. Form Validation</h2>
+        <p>HTML5 provides built-in validation attributes to ensure that users enter the correct information before submitting the form.</p>
+        
+        <h3>Types of Validation:</h3>
+        <ul>
+            <li><code>required</code>: Ensures that the field is not empty.</li>
+            <li><code>pattern</code>: Specifies a regular expression pattern that the field value must match.</li>
+            <li><code>minlength</code>: Specifies the minimum length of the value.</li>
+            <li><code>maxlength</code>: Specifies the maximum length of the value.</li>
+            <li><code>type</code>: Defines the type of input, such as <code>email</code> or <code>number</code>, to enforce specific formats.</li>
+        </ul>
+
+        <h3>Example of Required and Pattern Validation:</h3>
+        <pre><code>&lt;input type="text" name="username" required&gt;</code></pre>
+        <pre><code>&lt;input type="text" name="username" pattern="[A-Za-z]{3,}" title="Three or more letters"&gt;</code></pre>
+    </section>
+
+    <section>
+        <h2>6. Resetting Forms</h2>
+        <p>You can reset all form fields to their default values using the <code>&lt;input type="reset"&gt;</code> element.</p>
+        <pre><code>&lt;input type="reset" value="Reset Form"&gt;</code></pre>
+    </section>
+
+    <section>
+        <h2>7. Advanced Form Elements</h2>
+        <p>HTML forms also include other specialized input types for more advanced user interactions.</p>
+
+        <h3>Date Picker:</h3>
+        <p>The <code>input[type="date"]</code> element allows users to select a date from a calendar interface.</p>
+        <pre><code>&lt;input type="date" name="birthdate"&gt;</code></pre>
+
+        <h3>File Upload:</h3>
+        <p>The <code>input[type="file"]</code> element allows users to upload files to the server.</p>
+        <pre><code>&lt;input type="file" name="profile_picture"&gt;</code></pre>
+
+        <h3>Number Input:</h3>
+        <p>The <code>input[type="number"]</code> element allows users to input numeric values.</p>
+        <pre><code>&lt;input type="number" name="age"&gt;</code></pre>
+
+        <div class="button-container">
+          <a href="javascript.html" class="button button-previous">Previous Page</a>
+          <a href="index.html" class="button button-next">Home</a>
+        </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Web Development Tutorial</p>
+  </footer>
+
+</body>
+</html>

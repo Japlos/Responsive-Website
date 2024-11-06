@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conversion, Classes, JSON, and Debugging</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header>
+      <nav>
+        <h1>JavaScript Conversion, Classes, JSON, and Debugging</h1>
+      </nav>
+    </header>
+
+    <main>
+    <section>
+        <h2>1. JavaScript Conversion</h2>
+        <p>In JavaScript, "conversion" refers to the process of changing data from one type to another, such as from a string to a number or from a number to a boolean. JavaScript automatically converts types when necessary (type coercion), but developers can also manually convert values when required.</p>
+
+        <h3>1.1. Implicit Type Conversion (Type Coercion)</h3>
+        <p>JavaScript performs implicit type conversion when it automatically converts data types in certain situations, such as when adding a number to a string or comparing values of different types.</p>
+
+        <ul>
+            <li><strong>String and Number Coercion:</strong> If you add a number and a string, the number will be coerced into a string.</li>
+            <pre><code>console.log(5 + "5");  // "55"</code></pre>
+
+            <li><strong>Boolean Coercion:</strong> Non-zero numbers are coerced to <code>true</code>, while <code>0</code> and <code>NaN</code> are coerced to <code>false</code>.</li>
+            <pre><code>console.log(Boolean(0));   // false</code></pre>
+            <pre><code>console.log(Boolean(1));   // true</code></pre>
+        </ul>
+
+        <h3>1.2. Explicit Type Conversion</h3>
+        <p>You can manually convert one type to another using JavaScript's built-in functions.</p>
+
+        <ul>
+            <li><strong>To String:</strong> You can convert a value to a string using <code>String()</code> or <code>toString()</code>.</li>
+            <pre><code>let num = 123; console.log(String(num));  // "123"</code></pre>
+            <pre><code>let bool = true; console.log(bool.toString());  // "true"</code></pre>
+
+            <li><strong>To Number:</strong> You can convert a value to a number using <code>Number()</code>, <code>parseInt()</code>, or <code>parseFloat()</code>.</li>
+            <pre><code>let str = "456"; console.log(Number(str));  // 456</code></pre>
+            <pre><code>let strFloat = "3.14"; console.log(parseFloat(strFloat));  // 3.14</code></pre>
+
+            <li><strong>To Boolean:</strong> You can convert a value to a boolean using <code>Boolean()</code>.</li>
+            <pre><code>let val = "Hello"; console.log(Boolean(val));  // true</code></pre>
+        </ul>
+
+        <h3>1.3. Automatic Type Conversion in Comparisons</h3>
+        <p>JavaScript performs automatic type conversion when comparing values of different types.</p>
+        <ul>
+            <li><strong>Equality Comparison:</strong> The <code>==</code> operator performs type coercion, while <code>===</code> checks for strict equality.</li>
+            <pre><code>console.log(5 == "5");   // true (type coercion)</code></pre>
+            <pre><code>console.log(5 === "5");  // false (strict equality)</code></pre>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. JavaScript Classes</h2>
+        <p>JavaScript classes provide a way to define objects with shared properties and methods. Classes were introduced in ECMAScript 6 (ES6) and offer a more structured way to work with objects and inheritance compared to traditional constructor functions.</p>
+
+        <h3>2.1. Defining a Class</h3>
+        <p>Classes in JavaScript are defined using the <code>class</code> keyword, followed by the class name, and the class body which contains the constructor and methods.</p>
+        <pre><code>class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+}</code></pre>
+
+        <h3>2.2. Creating Instances</h3>
+        <p>Once you have defined a class, you can create instances of that class using the <code>new</code> keyword.</p>
+        <pre><code>const person1 = new Person("Alice", 25);
+person1.greet();  // "Hello, my name is Alice and I am 25 years old."</code></pre>
+
+        <h3>2.3. Inheritance</h3>
+        <p>JavaScript classes can inherit from other classes using the <code>extends</code> keyword, allowing child classes to inherit methods and properties from parent classes.</p>
+        <pre><code>class Employee extends Person {
+    constructor(name, age, position) {
+        super(name, age);  // Call the parent constructor
+        this.position = position;
+    }
+
+    work() {
+        console.log(`${this.name} is working as a ${this.position}.`);
+    }
+}
+
+const employee1 = new Employee("Bob", 30, "Engineer");
+employee1.greet();   // "Hello, my name is Bob and I am 30 years old."
+employee1.work();    // "Bob is working as a Engineer."</code></pre>
+
+        <h3>2.4. Getters and Setters</h3>
+        <p>JavaScript classes also support getters and setters to access and modify properties.</p>
+        <pre><code>class Rectangle {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    get area() {
+        return this.width * this.height;
+    }
+
+    set area(newArea) {
+        this.width = newArea / this.height;
+    }
+}
+
+const rect = new Rectangle(5, 10);
+console.log(rect.area);  // 50
+rect.area = 100;
+console.log(rect.width);  // 10</code></pre>
+    </section>
+
+    <section>
+        <h2>3. JavaScript JSON</h2>
+        <p>JSON (JavaScript Object Notation) is a lightweight data format commonly used for exchanging data between a server and a web application. JavaScript provides two methods for working with JSON: <code>JSON.parse()</code> and <code>JSON.stringify()</code>.</p>
+
+        <h3>3.1. Converting JavaScript Objects to JSON</h3>
+        <p>To convert a JavaScript object into a JSON string, use the <code>JSON.stringify()</code> method.</p>
+        <pre><code>const person = {
+    name: "Alice",
+    age: 25
+};
+
+const jsonString = JSON.stringify(person);
+console.log(jsonString);  // '{"name":"Alice","age":25}'</code></pre>
+
+        <h3>3.2. Converting JSON to JavaScript Objects</h3>
+        <p>To convert a JSON string into a JavaScript object, use the <code>JSON.parse()</code> method.</p>
+        <pre><code>const jsonString = '{"name":"Alice","age":25}';
+const parsedObject = JSON.parse(jsonString);
+console.log(parsedObject.name);  // "Alice"</code></pre>
+
+        <h3>3.3. Handling JSON Errors</h3>
+        <p>When using <code>JSON.parse()</code>, ensure that the string is valid JSON. Invalid JSON will throw a <code>SyntaxError</code>.</p>
+        <pre><code>try {
+    const invalidJson = '{"name": "Alice", age: 25}';  // Invalid JSON (missing quotes around "age")
+    const parsed = JSON.parse(invalidJson);
+} catch (error) {
+    console.error("Error parsing JSON:", error);
+}</code></pre>
+    </section>
+
+    <section>
+        <h2>4. JavaScript Debugging</h2>
+        <p>Debugging in JavaScript refers to the process of identifying and fixing errors or bugs in your code. JavaScript offers several tools and techniques for effective debugging.</p>
+
+        <h3>4.1. Using Console Methods</h3>
+        <p>The <code>console</code> object in JavaScript provides several methods to help with debugging.</p>
+        <ul>
+            <li><strong>console.log():</strong> Outputs messages to the console, useful for general debugging.</li>
+            <pre><code>console.log("Hello, World!");</code></pre>
+
+            <li><strong>console.error():</strong> Logs error messages to the console.</li>
+            <pre><code>console.error("This is an error!");</code></pre>
+
+            <li><strong>console.warn():</strong> Logs warnings to the console.</li>
+            <pre><code>console.warn("This is a warning!");</code></pre>
+
+            <li><strong>console.table():</strong> Displays data in a tabular format, which is useful for inspecting arrays and objects.</li>
+            <pre><code>console.table([1, 2, 3, 4]);</code></pre>
+        </ul>
+
+        <h3>4.2. Using Debugger Statements</h3>
+        <p>JavaScript's <code>debugger</code> statement can be used to pause code execution at a specific point and inspect values.</p>
+        <pre><code>function testFunction() {
+    let x = 10;
+    debugger;  // Execution will pause here
+    console.log(x);
+}
+
+testFunction();</code></pre>
+
+        <h3>4.3. Browser Developer Tools</h3>
+        <p>Modern browsers come with built-in developer tools that allow you to inspect, debug, and profile your JavaScript code. You can access the developer tools by right-clicking on a webpage and selecting "Inspect" or pressing <code>F12</code>.</p>
+    </section>
+
+    <div class="button-container">
+      <a href="array.html" class="button button-previous">Previous Page</a>
+      <a href="index.html" class="button button-next">Home Page</a>
+    </div>
+  
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2024 Web Development Tutorial</p>
+    </footer>
+
+</body>
+</html>

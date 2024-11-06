@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Colors, Backgrounds, and Borders</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+       <h1>CSS Colors, Backgrounds, and Borders</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main>
+    <section>
+        <h2>1. CSS Colors</h2>
+        <p>CSS Colors are used to define the color of various elements on a web page, including text, backgrounds, and borders. There are several ways to specify colors in CSS, including using color names, hex codes, RGB values, and more.</p>
+
+        <h3>Color Formats:</h3>
+        <ul>
+            <li><strong>Color Names:</strong> CSS allows you to use predefined color names such as <code>red</code>, <code>blue</code>, <code>green</code>, etc.</li>
+            <pre><code>color: red;</code></pre>
+
+            <li><strong>Hexadecimal (Hex) Color:</strong> A 6-digit hexadecimal number representing the red, green, and blue (RGB) values of a color. The format is <code>#RRGGBB</code>.</li>
+            <pre><code>color: #FF5733;</code></pre>
+
+            <li><strong>RGB Color:</strong> Specifies the red, green, and blue values of a color, each ranging from 0 to 255.</li>
+            <pre><code>color: rgb(255, 87, 51);</code></pre>
+
+            <li><strong>RGBA Color:</strong> Similar to RGB but with an additional alpha (transparency) value ranging from 0 (fully transparent) to 1 (fully opaque).</li>
+            <pre><code>color: rgba(255, 87, 51, 0.5);</code></pre>
+
+            <li><strong>HSL Color:</strong> Represents a color in terms of its hue, saturation, and lightness.</li>
+            <pre><code>color: hsl(9, 100%, 60%);</code></pre>
+
+            <li><strong>HSLA Color:</strong> Similar to HSL, but includes an alpha (transparency) value.</li>
+            <pre><code>color: hsla(9, 100%, 60%, 0.5);</code></pre>
+        </ul>
+
+        <h3>Example of Color Usage:</h3>
+        <pre><code>p {
+    color: #4CAF50;
+}</code></pre>
+        <p>This example sets the text color of <code>&lt;p&gt;</code> elements to a shade of green.</p>
+
+    </section>
+
+    <section>
+        <h2>2. CSS Backgrounds</h2>
+        <p>CSS backgrounds are used to style the background area of elements. You can use colors, images, gradients, and more for backgrounds. The <code>background</code> property is shorthand for several background-related properties like background-color, background-image, background-position, etc.</p>
+
+        <h3>Common Background Properties:</h3>
+        <ul>
+            <li><strong>background-color:</strong> Sets the background color of an element.</li>
+            <pre><code>background-color: #f0f0f0;</code></pre>
+
+            <li><strong>background-image:</strong> Specifies an image to be used as the background. You can use URLs or gradients.</li>
+            <pre><code>background-image: url('image.jpg');</code></pre>
+
+            <li><strong>background-position:</strong> Defines the position of the background image (e.g., left, center, right, top, bottom).</li>
+            <pre><code>background-position: center;</code></pre>
+
+            <li><strong>background-repeat:</strong> Controls whether the background image repeats. It can be <code>repeat</code>, <code>no-repeat</code>, or <code>repeat-x</code> (horizontal) or <code>repeat-y</code> (vertical).</li>
+            <pre><code>background-repeat: no-repeat;</code></pre>
+
+            <li><strong>background-size:</strong> Specifies the size of the background image. You can use values like <code>cover</code>, <code>contain</code>, or specific dimensions (e.g., <code>100px 100px</code>).</li>
+            <pre><code>background-size: cover;</code></pre>
+
+            <li><strong>background-attachment:</strong> Defines whether the background image scrolls with the page or remains fixed when scrolling.</li>
+            <pre><code>background-attachment: fixed;</code></pre>
+
+            <li><strong>background:</strong> This shorthand property allows you to combine all the individual background properties into one.</li>
+            <pre><code>background: #f0f0f0 url('image.jpg') no-repeat center;</code></pre>
+        </ul>
+
+        <h3>Example of Background Usage:</h3>
+        <pre><code>div {
+    background-color: #333;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}</code></pre>
+        <p>This example sets the background color, image, and ensures the image is centered and doesn't repeat.</p>
+
+    </section>
+
+    <section>
+        <h2>3. CSS Borders</h2>
+        <p>CSS borders are used to create a border around HTML elements. The <code>border</code> property allows you to define the style, width, and color of the border. Borders can be applied to all sides of an element, or you can customize each side individually.</p>
+
+        <h3>Common Border Properties:</h3>
+        <ul>
+            <li><strong>border:</strong> A shorthand property to set the width, style, and color of the border in one line.</li>
+            <pre><code>border: 2px solid #000000;</code></pre>
+
+            <li><strong>border-width:</strong> Specifies the thickness of the border. It can be set to values like <code>thin</code>, <code>medium</code>, or <code>thick</code>, or in pixels or other length units.</li>
+            <pre><code>border-width: 2px;</code></pre>
+
+            <li><strong>border-style:</strong> Defines the style of the border. Common values include <code>solid</code>, <code>dashed</code>, <code>dotted</code>, <code>double</code>, and <code>none</code>.</li>
+            <pre><code>border-style: solid;</code></pre>
+
+            <li><strong>border-color:</strong> Sets the color of the border. This can be any color value like color names, hex codes, RGB, etc.</li>
+            <pre><code>border-color: #ff0000;</code></pre>
+
+            <li><strong>border-radius:</strong> Allows you to create rounded corners for the border by setting the radius of the corners.</li>
+            <pre><code>border-radius: 10px;</code></pre>
+
+            <li><strong>border-top, border-right, border-bottom, border-left:</strong> These properties allow you to style individual borders (top, right, bottom, and left) separately.</li>
+            <pre><code>border-top: 3px solid blue;</code></pre>
+        </ul>
+
+        <h3>Example of Border Usage:</h3>
+        <pre><code>div {
+    border: 3px solid #000000;
+    border-radius: 10px;
+}</code></pre>
+        <p>This example creates a solid black border of 3px thickness with rounded corners for the <code>&lt;div&gt;</code> element.</p>
+
+    </section>
+
+    <section>
+        <h2>4. Combining Colors, Backgrounds, and Borders</h2>
+        <p>It is common to combine multiple CSS properties such as color, background, and borders to create a visually appealing design. Below is an example where all three properties are used together to style a <code>&lt;div&gt;</code> element.</p>
+
+        <h3>Example of Combined Properties:</h3>
+        <pre><code>div {
+    background-color: #f4f4f4;
+    background-image: url('background.jpg');
+    background-size: cover;
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: #333;
+    padding: 20px;
+}</code></pre>
+        <p>This example sets a background color and image, applies a border with rounded corners, 
+          and defines text color and padding for the <code>&lt;div&gt;</code> element.</p>
+
+          <div class="button-container">
+            <a href="cssintro.html" class="button button-previous">Previous Page</a>
+            <a href="margins.html" class="button button-next">Next Page</a>
+          </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Web Development Tutorial</p>
+  </footer>
+
+</body>
+</html>

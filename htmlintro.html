@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Introduction</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body class="html-page">
+    <header>
+      <nav>
+        <h1>HTML Introduction</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="introduction">
+        <h2>Introduction to HTML</h2>
+        <p>
+          HTML, or HyperText Markup Language, is the standard language used to
+          create web pages. It serves as the backbone of web content, providing
+          the basic structure for documents on the internet. HTML uses a system
+          of tags and elements to format text, embed images, create links, and
+          define the layout of web pages.
+        </p>
+        <p>
+          With HTML, you can easily create structured documents that include
+          headings, paragraphs, lists, links, images, and more. The language is
+          essential for web development, as it allows browsers to render and
+          display content in a user-friendly way. HTML is often used in
+          conjunction with Cascading Style Sheets (CSS) for styling and
+          JavaScript for interactivity, making it a fundamental skill for web
+          developers and designers.
+        </p>
+        <p>
+          Overall, understanding HTML is crucial for anyone interested in
+          building websites or working in the field of web development, as it
+          lays the foundation for more advanced web technologies.
+        </p>
+      </section>
+
+      <section id="elements">
+        <h2>What is an HTML Element?</h2>
+        <p>
+          An HTML element is a component of an HTML document that defines the
+          structure and content of the page. Elements are represented by tags,
+          which are enclosed in angle brackets. For example, the
+          <code>&lt;p&gt;</code> tag defines a paragraph element. Each element
+          typically consists of an opening tag, content, and a closing tag. Some
+          elements, like <code>&lt;br&gt;</code> for a line break, are
+          self-closing and do not require a closing tag.
+        </p>
+        <p>
+          HTML elements can also have attributes that provide additional
+          information about the element. For instance, the
+          <code>src</code> attribute in an <code>&lt;img&gt;</code> tag
+          specifies the source of the image to be displayed.
+        </p>
+      </section>
+
+      <section id="history">
+        <h2>History of HTML</h2>
+        <p>
+          HTML was created by Tim Berners-Lee in 1991 as a way to format and
+          link documents on the World Wide Web. The first version of HTML was
+          simple and focused primarily on text formatting and hyperlinking. Over
+          the years, HTML has evolved significantly, with various versions
+          introducing new features and capabilities.
+        </p>
+        <p>
+          HTML 2.0 was released in 1995, followed by HTML 3.2 in 1997 and HTML
+          4.01 in 1999, which included support for multimedia elements and
+          improved accessibility features. In 2014, HTML5 was published,
+          bringing many modern features such as audio and video support, new
+          semantic elements, and improved parsing rules, making it easier for
+          developers to create complex web applications.
+        </p>
+        <p>
+          HTML continues to be actively developed, with ongoing updates to
+          enhance its functionality and usability for developers and users
+          alike.
+        </p>
+      </section>
+
+      <section id="structure">
+        <h2>Structure of an HTML Document</h2>
+        <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Page Title&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+            &lt;p&gt;This is a simple HTML document.&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
+      </section>
+
+        <section id="explanation">
+          <h2>Explanation of Each Tag in HTML Document</h2>
+          <h4>&lt;!DOCTYPE html&gt;</h4>
+          <p>This is the document type declaration. 
+            It tells the browser that this is an HTML5 document, the latest standard of HTML. 
+            It ensures that the browser renders the HTML according to HTML5 rules.</p>
+            <h4>&lt;html lang="en"&gt;</h4>
+            <p>This is the root element of an HTML document, indicating the start of the HTML code.<br>
+              The lang="en" attribute specifies the document’s language as English. 
+              This is helpful for search engines and accessibility tools (like screen readers) to understand the language of the page.</p>
+              <h4>&lt;head&gt;</h4>
+              <p>This tag contains metadata (information about the document that is not displayed on the page) and links to external resources.
+                Elements inside &lt;head&gt; don’t appear on the page itself but affect how the page is displayed and accessed.</p>
+                <h4>&lt;meta charset="UTF-8"&gt;</h4>
+                <p>Specifies the character encoding for the HTML document, with UTF-8 being the most widely used. 
+                  It supports almost all characters from different languages, ensuring that text is displayed correctly.</p>
+                  <h4> &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</h4>
+                  <p>This tag helps ensure the webpage is responsive on mobile devices.
+                    width=device-width tells the browser to match the width of the screen, and initial-scale=1.0 sets the initial zoom level.
+                     These attributes make the page more mobile-friendly.</p>
+                     <h4>&lt;title&gt;</h4>
+                     <p>Defines the title of the webpage, which appears in the browser tab and is used as the page title in search engine results. 
+                      The &lt;title&gt; tag is essential for SEO and usability.</p>
+                      <h4>&lt;body&gt;</h4>
+                      <p>Contains the main content of the webpage, everything that will be visible in the browser.
+                        All visible elements such as headings, paragraphs, images, and links are placed within the &lt;body&gt; tag.</p>
+                        <h4>&lt;h1&gt;</h4>
+                        <p>This is a heading tag, specifically the top-level heading. HTML offers six heading levels, from &lt;h1&gt; to &lt;h6&gt;, with &lt;h1&gt; being the most important and &lt;h6&gt; the least.
+                          &lt;h1&gt; is often used for the main title of the page or a major section, as search engines and accessibility tools treat it as an important label for the content.</p>
+                          <h4>&lt;p&gt;</h4>
+                          <p>Defines a paragraph of text. The &lt;p&gt; tag is used for regular body text within sections of the page.
+                            Paragraph tags add spacing before and after each block of text for readability.</p>
+                            <h4>&lt;/html&gt;</h4>
+                            <p>This closing tag marks the end of the HTML document.
+                              All content of the webpage should be placed inside this &lt;html&gt; root tag to ensure correct rendering.</p>
+        </section>
+            
+        <div class="button-container">
+          <a href="index.html" class="button button-previous">Previous Page</a>
+          <a href="nextpage.html" class="button button-next">Next Page</a>
+        </div>
+                              
+      </section>
+    </main>
+
+    
+
+    <footer>
+      <p>&copy; 2024 Web Development Tutorial</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text, Fonts, Icons, and Links</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>CSS Text, Fonts, Icons, and Links</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+    
+    <main>
+    <section>
+        <h2>1. CSS Text</h2>
+        <p>The CSS <code>text</code> properties are used to control the style and behavior of text content within an element. These properties can affect how text is displayed, its alignment, decoration, transformation, and spacing.</p>
+
+        <h3>Key Properties of CSS Text:</h3>
+        <ul>
+            <li><strong>text-align:</strong> Defines the horizontal alignment of text inside an element. Possible values include <code>left</code>, <code>right</code>, <code>center</code>, and <code>justify</code>.</li>
+            <pre><code>text-align: center;</code></pre>
+
+            <li><strong>text-decoration:</strong> Specifies decoration on text, such as <code>underline</code>, <code>overline</code>, <code>line-through</code>, or <code>none</code>.</li>
+            <pre><code>text-decoration: underline;</code></pre>
+
+            <li><strong>text-transform:</strong> Controls the capitalization of text. Possible values are <code>uppercase</code>, <code>lowercase</code>, and <code>capitalize</code>.</li>
+            <pre><code>text-transform: uppercase;</code></pre>
+
+            <li><strong>letter-spacing:</strong> Adjusts the space between characters of the text. You can use it to improve readability or create artistic effects.</li>
+            <pre><code>letter-spacing: 2px;</code></pre>
+
+            <li><strong>line-height:</strong> Specifies the height of a line of text, used for controlling the spacing between lines in multi-line text.</li>
+            <pre><code>line-height: 1.5;</code></pre>
+
+            <li><strong>text-indent:</strong> Defines the indentation of the first line of text inside an element.</li>
+            <pre><code>text-indent: 20px;</code></pre>
+
+            <li><strong>white-space:</strong> Defines how white spaces inside an element are handled. Values include <code>normal</code>, <code>nowrap</code>, <code>pre</code>, etc.</li>
+            <pre><code>white-space: nowrap;</code></pre>
+
+            <li><strong>word-spacing:</strong> Controls the space between words in a text element.</li>
+            <pre><code>word-spacing: 5px;</code></pre>
+        </ul>
+
+        <h3>Example of Text Usage:</h3>
+        <pre><code>p {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+    line-height: 1.8;
+}</code></pre>
+        <p>This example sets the text in a <code>&lt;p&gt;</code> element to be centered, underlined, with capitalized words and increased line height.</p>
+    </section>
+
+    <section>
+        <h2>2. CSS Fonts</h2>
+        <p>CSS allows you to style text by applying custom fonts. The <code>font</code> properties define the appearance of text within an element, such as the typeface, size, weight, style, and more.</p>
+
+        <h3>Key Properties of CSS Fonts:</h3>
+        <ul>
+            <li><strong>font-family:</strong> Specifies the font of the text. You can list multiple font names to specify fallback fonts if the first choice is unavailable.</li>
+            <pre><code>font-family: 'Arial', sans-serif;</code></pre>
+
+            <li><strong>font-size:</strong> Defines the size of the font. It can be set using absolute units (px, em) or relative units (rem, %) to make the text responsive.</li>
+            <pre><code>font-size: 16px;</code></pre>
+
+            <li><strong>font-weight:</strong> Specifies the thickness of the font. Common values include <code>normal</code>, <code>bold</code>, and numeric values ranging from 100 to 900.</li>
+            <pre><code>font-weight: bold;</code></pre>
+
+            <li><strong>font-style:</strong> Defines whether the font is italicized or normal.</li>
+            <pre><code>font-style: italic;</code></pre>
+
+            <li><strong>font-variant:</strong> Controls the use of small-caps (uppercase letters in a smaller size than normal). It can be set to <code>normal</code> or <code>small-caps</code>.</li>
+            <pre><code>font-variant: small-caps;</code></pre>
+
+            <li><strong>line-height:</strong> Similar to the <code>text-line-height</code> property, it controls the vertical spacing between lines in a block of text.</li>
+            <pre><code>line-height: 1.6;</code></pre>
+
+            <li><strong>font-feature-settings:</strong> A property that allows advanced typographic features like ligatures and kerning to be specified for supported fonts.</li>
+            <pre><code>font-feature-settings: 'liga' 1;</code></pre>
+        </ul>
+
+        <h3>Example of Font Usage:</h3>
+        <pre><code>h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+}</code></pre>
+        <p>This example defines the font for the <code>&lt;h1&gt;</code> element, with "Times New Roman" as the first choice, bold weight, and italic style.</p>
+    </section>
+
+    <section>
+        <h2>3. CSS Icons</h2>
+        <p>Icons are visual symbols that can be used to enhance the user experience and improve the visual design of a webpage. In CSS, icons are often implemented as images, font-based icons, or SVGs (Scalable Vector Graphics).</p>
+
+        <h3>Using Font Icons (e.g., Font Awesome):</h3>
+        <p>Font-based icons are popular because they are scalable and easy to style with CSS. One of the most popular libraries is Font Awesome, which provides a variety of vector icons.</p>
+        
+        <h4>Example of Using Font Awesome Icons:</h4>
+        <p>To use Font Awesome, you would need to include the library via CDN or locally in your project. Below is an example of adding an icon to a page:</p>
+        <pre><code>&lt;i class="fa fa-home"&gt;&lt;/i&gt;</code></pre>
+        <p>This example adds a "home" icon from the Font Awesome library using the <code>&lt;i&gt;</code> tag with a class of <code>fa fa-home</code>.</p>
+
+        <h3>Using SVG Icons:</h3>
+        <p>SVG icons are another method of using scalable graphics. They can be easily customized with CSS. Here's an example of embedding an SVG icon directly into HTML:</p>
+        <pre><code>&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"&gt;
+    &lt;path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"&gt;&lt;/path&gt;
+&lt;/svg&gt;</code></pre>
+        <p>This example shows an SVG icon with a simple circular path and a view box. You can customize the color and size of SVGs using CSS.</p>
+    </section>
+
+    <section>
+        <h2>4. CSS Links</h2>
+        <p>CSS can be used to style links, including those that are normal, visited, hovered, or active. These different states allow for an interactive, user-friendly experience for navigation elements.</p>
+
+        <h3>Link States:</h3>
+        <ul>
+            <li><strong>a:</strong> Targets the normal (unvisited) state of the link.</li>
+            <pre><code>a {
+    color: blue;
+}</code></pre>
+
+            <li><strong>a:visited:</strong> Targets links that have been visited by the user. Usually, this state is styled differently for better UX.</li>
+            <pre><code>a:visited {
+    color: purple;
+}</code></pre>
+
+            <li><strong>a:hover:</strong> Styles the link when the user hovers over it.</li>
+            <pre><code>a:hover {
+    color: red;
+}</code></pre>
+
+            <li><strong>a:active:</strong> Defines the style of the link when it is being clicked or active.</li>
+            <pre><code>a:active {
+    color: green;
+}</code></pre>
+        </ul>
+
+        <h3>Example of Styling Links:</h3>
+        <pre><code>a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2ecc71;
+}
+
+a:visited {
+    color: #9b59b6;
+}</code></pre>
+        <p>This example removes the underline from links by default, changes the color to blue, 
+          and adds an underline and changes the color when the user hovers over the link.</p>
+
+          <div class="button-container">
+            <a href="margins.html" class="button button-previous">Previous Page</a>
+            <a href="display.html" class="button button-next">Next Page</a>
+          </div>
+          
+    </section>
+  </main>
+
+    <footer>
+      <p>&copy; 2024 Web Development Tutorial</p>
+    </footer>
+
+</body>
+</html>

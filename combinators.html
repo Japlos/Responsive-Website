@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators, Inline-block, and Align</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>CSS Combinators, Inline-block, and Align</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main>
+    <section>
+        <h2>1. CSS Combinators</h2>
+        <p>CSS combinators are used to define relationships between selectors. They allow you to apply styles based on the position of elements relative to other elements. There are four primary combinators: descendant, child, adjacent sibling, and general sibling.</p>
+
+        <h3>Types of Combinators:</h3>
+        <ul>
+            <li><strong>Descendant Combinator (space):</strong> The descendant combinator applies styles to any element that is a descendant (child, grandchild, etc.) of another element. The space between two selectors indicates a descendant relationship.</li>
+            <pre><code>div p {
+    color: blue;
+}</code></pre>
+            <p>This applies the color blue to all <code>&lt;p&gt;</code> elements inside a <code>&lt;div&gt;</code>, including nested paragraphs.</p>
+
+            <li><strong>Child Combinator (&gt;):</strong> The child combinator selects elements that are a direct child of a specific element. The child relationship is represented by the <code>&gt;</code> symbol.</li>
+            <pre><code>div > p {
+    color: red;
+}</code></pre>
+            <p>This applies the color red to only the <code>&lt;p&gt;</code> elements that are direct children of a <code>&lt;div&gt;</code> element, not nested paragraphs.</p>
+
+            <li><strong>Adjacent Sibling Combinator (+):</strong> The adjacent sibling combinator selects an element that is immediately adjacent to a specified element. It uses the <code>+</code> symbol to indicate adjacency.</li>
+            <pre><code>h1 + p {
+    font-size: 18px;
+}</code></pre>
+            <p>This applies a font size of 18px to the <code>&lt;p&gt;</code> element that directly follows an <code>&lt;h1&gt;</code> element.</p>
+
+            <li><strong>General Sibling Combinator (~):</strong> The general sibling combinator applies styles to all elements that are siblings (i.e., share the same parent) and appear after a specified element. It uses the <code>~</code> symbol to indicate a sibling relationship.</li>
+            <pre><code>h1 ~ p {
+    color: green;
+}</code></pre>
+            <p>This applies the color green to all <code>&lt;p&gt;</code> elements that are siblings of an <code>&lt;h1&gt;</code> element and come after it in the HTML document.</p>
+        </ul>
+
+        <h3>Example of Combinator Usage:</h3>
+        <pre><code>ul > li {
+    font-weight: bold;
+}
+
+div p {
+    font-style: italic;
+}</code></pre>
+        <p>This example makes the direct child <code>&lt;li&gt;</code> elements inside a <code>&lt;ul&gt;</code> bold and the <code>&lt;p&gt;</code> elements inside a <code>&lt;div&gt;</code> italic.</p>
+    </section>
+
+    <section>
+        <h2>2. CSS Inline-block</h2>
+        <p>The <code>inline-block</code> value for the <code>display</code> property is a hybrid between <code>inline</code> and <code>block</code>. An element with <code>display: inline-block;</code> behaves like an inline element in that it does not cause a line break, but it also accepts block-level properties such as width and height, making it more versatile than a regular inline element.</p>
+
+        <h3>Properties of Inline-block:</h3>
+        <ul>
+            <li><strong>Inline Behavior:</strong> An element with <code>inline-block</code> flows inline with surrounding elements, similar to an inline element.</li>
+            <pre><code>span {
+    display: inline-block;
+}</code></pre>
+
+            <li><strong>Block Behavior:</strong> An element with <code>inline-block</code> can accept width, height, padding, margin, and other block-level properties.</li>
+            <pre><code>div {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+}</code></pre>
+
+            <li><strong>Aligning Inline-block Elements:</strong> You can align inline-block elements horizontally using properties like <code>text-align</code> on their parent element.</li>
+            <pre><code>div {
+    text-align: center;
+}
+
+span {
+    display: inline-block;
+}</code></pre>
+
+            <li><strong>Vertical Alignment:</strong> You can control the vertical alignment of inline-block elements using the <code>vertical-align</code> property.</li>
+            <pre><code>span {
+    display: inline-block;
+    vertical-align: middle;
+}</code></pre>
+        </ul>
+
+        <h3>Example of Inline-block Usage:</h3>
+        <pre><code>div {
+    text-align: center;
+}
+
+span {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    background-color: lightgray;
+}</code></pre>
+        <p>This example centers the inline-block <code>&lt;span&gt;</code> elements within their parent <code>&lt;div&gt;</code>, and each <code>&lt;span&gt;</code> has padding, margin, and background-color applied.</p>
+    </section>
+
+    <section>
+        <h2>3. CSS Align</h2>
+        <p>The <code>align</code> property in CSS is not a single property, but rather a concept used across different contexts to align elements in various ways. Different properties are used for aligning elements in different scenarios, such as text, blocks, flex items, or grid items. Here, we will explore how alignment works with <code>text-align</code>, <code>vertical-align</code>, <code>flexbox</code>, and <code>grid</code>.</p>
+
+        <h3>Aligning Text:</h3>
+        <ul>
+            <li><strong>text-align:</strong> The <code>text-align</code> property is used to align text horizontally within its container. It works on block-level elements like <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, and inline elements like <code>&lt;span&gt;</code>.</li>
+            <pre><code>p {
+    text-align: center;
+}</code></pre>
+
+            <li><strong>Possible Values:</strong> The <code>text-align</code> property accepts values such as <code>left</code>, <code>center</code>, <code>right</code>, and <code>justify</code>.</li>
+            <pre><code>p {
+    text-align: justify;
+}</code></pre>
+        </ul>
+
+        <h3>Aligning Inline or Inline-block Elements:</h3>
+        <ul>
+            <li><strong>vertical-align:</strong> The <code>vertical-align</code> property is used to align inline or inline-block elements vertically relative to their parent or sibling elements. It is commonly used to align images, text, or other inline elements.</li>
+            <pre><code>img {
+    vertical-align: middle;
+}</code></pre>
+
+            <li><strong>Possible Values:</strong> Common values for <code>vertical-align</code> are <code>top</code>, <code>middle</code>, <code>bottom</code>, and <code>baseline</code>.</li>
+        </ul>
+
+        <h3>Aligning with Flexbox:</h3>
+        <ul>
+            <li><strong>align-items:</strong> The <code>align-items</code> property is used in flexbox layouts to align items along the cross axis (vertically by default). This property affects all flex items within a flex container.</li>
+            <pre><code>div {
+    display: flex;
+    align-items: center;
+}</code></pre>
+
+            <li><strong>align-self:</strong> The <code>align-self</code> property allows you to override the alignment of a specific flex item, independently of the other items.</li>
+            <pre><code>div {
+    display: flex;
+}
+
+span {
+    align-self: flex-start;
+}</code></pre>
+        </ul>
+
+        <h3>Aligning with Grid:</h3>
+        <ul>
+            <li><strong>align-items (Grid):</strong> In grid layouts, the <code>align-items</code> property is used to align all grid items along the block (vertical) axis.</li>
+            <pre><code>div {
+    display: grid;
+    align-items: center;
+}</code></pre>
+
+            <li><strong>align-self (Grid):</strong> Like in flexbox, <code>align-self</code> can be used to align individual grid items.</li>
+            <pre><code>span {
+    align-self: start;
+}</code></pre>
+        </ul>
+
+        <div class="button-container">
+          <a href="overflow.html" class="button button-previous">Previous Page</a>
+          <a href="websitelayout.html" class="button button-next">Next Page</a>
+        </div>
+        
+      </section>
+    </main>
+    
+      <footer>
+      <p>&copy; 2024 Web Development Tutorial</p>
+      </footer>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display, Max-width, and Position</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>CSS Display, Max-width, and Position</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main>
+    <section>
+        <h2>1. CSS Display</h2>
+        <p>The <code>display</code> property in CSS is used to define how an element is displayed on the page. It determines the behavior of an element and how it interacts with other elements. The most commonly used display values include block, inline, inline-block, flex, grid, and none.</p>
+
+        <h3>Common Display Values:</h3>
+        <ul>
+            <li><strong>block:</strong> An element with <code>display: block;</code> will take up the full width of its parent container and create a line break before and after the element.</li>
+            <pre><code>div {
+    display: block;
+}</code></pre>
+
+            <li><strong>inline:</strong> An element with <code>display: inline;</code> will only take up as much width as its content and will not cause a line break. It flows inline with other elements.</li>
+            <pre><code>span {
+    display: inline;
+}</code></pre>
+
+            <li><strong>inline-block:</strong> An element with <code>display: inline-block;</code> behaves like an inline element (no line break), but you can set width and height properties.</li>
+            <pre><code>button {
+    display: inline-block;
+}</code></pre>
+
+            <li><strong>flex:</strong> An element with <code>display: flex;</code> becomes a flex container, allowing its children to be aligned and distributed using the flexbox model.</li>
+            <pre><code>div {
+    display: flex;
+}</code></pre>
+
+            <li><strong>grid:</strong> An element with <code>display: grid;</code> becomes a grid container, enabling the use of the CSS Grid Layout system to position child elements.</li>
+            <pre><code>section {
+    display: grid;
+}</code></pre>
+
+            <li><strong>none:</strong> The <code>display: none;</code> value removes the element from the document layout, meaning it doesn't take up any space and is not visible.</li>
+            <pre><code>div {
+    display: none;
+}</code></pre>
+        </ul>
+
+        <h3>Example of Display Usage:</h3>
+        <pre><code>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}</code></pre>
+        <p>This example sets the <code>&lt;div&gt;</code> to use flexbox, aligning its children in the center horizontally and vertically.</p>
+    </section>
+
+    <section>
+        <h2>2. CSS Max-width</h2>
+        <p>The <code>max-width</code> property is used to set the maximum width of an element. It ensures that the element does not grow beyond a specified width, regardless of its content or the width of its parent container. This is particularly useful in responsive web design to prevent elements from becoming too wide on larger screens.</p>
+
+        <h3>Key Points about Max-width:</h3>
+        <ul>
+            <li><strong>max-width:</strong> Defines the maximum width of an element. The element will not exceed this width, even if its content or container would allow it to grow further.</li>
+            <pre><code>img {
+    max-width: 100%;
+}</code></pre>
+            <p>In this example, the image will never exceed the width of its container, making it responsive.</p>
+
+            <li>Values for <code>max-width</code> can be set in various units such as <code>px</code>, <code>em</code>, <code>%</code>, <code>vw</code>, and others.</li>
+            <pre><code>div {
+    max-width: 600px;
+}</code></pre>
+            <p>This example ensures that the <code>&lt;div&gt;</code> will never exceed 600px in width, even on larger screens.</p>
+
+            <li><strong>Responsive Design:</strong> The <code>max-width</code> property is commonly used in conjunction with <code>width: 100%</code> to ensure elements are flexible and adapt to various screen sizes.</li>
+            <pre><code>img {
+    width: 100%;
+    max-width: 500px;
+}</code></pre>
+            <p>This combination ensures that the image is responsive, but it will never be larger than 500px in width, regardless of the screen size.</p>
+        </ul>
+        
+        <h3>Example of Max-width Usage:</h3>
+        <pre><code>div {
+    max-width: 80%;
+    margin: 0 auto;
+}</code></pre>
+        <p>This example sets the <code>&lt;div&gt;</code> to have a maximum width of 80% of its parent container, with automatic margins to center it horizontally.</p>
+    </section>
+
+    <section>
+        <h2>3. CSS Position</h2>
+        <p>The <code>position</code> property in CSS determines how an element is positioned in the document. By default, elements are positioned statically, but you can change this behavior using different position values like absolute, relative, fixed, sticky, and static.</p>
+
+        <h3>Positioning Types:</h3>
+        <ul>
+            <li><strong>static:</strong> This is the default positioning for all elements. Elements with <code>position: static;</code> are positioned based on the normal flow of the document and are not affected by top, bottom, left, or right properties.</li>
+            <pre><code>div {
+    position: static;
+}</code></pre>
+
+            <li><strong>relative:</strong> An element with <code>position: relative;</code> is positioned relative to its normal position in the document flow. This allows you to offset the element from where it would normally appear using the <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties.</li>
+            <pre><code>div {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}</code></pre>
+            <p>This example moves the <code>&lt;div&gt;</code> element 10px down and 20px to the right relative to its normal position.</p>
+
+            <li><strong>absolute:</strong> An element with <code>position: absolute;</code> is positioned relative to its closest positioned ancestor (an element with a position other than static). If no positioned ancestor is found, it is positioned relative to the initial containing block (usually the <code>&lt;html&gt;</code> element).</li>
+            <pre><code>div {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}</code></pre>
+            <p>This example places the <code>&lt;div&gt;</code> 50px from the top and 100px from the left of its positioned ancestor (or the page if no positioned ancestor is found).</p>
+
+            <li><strong>fixed:</strong> An element with <code>position: fixed;</code> is positioned relative to the browser window (viewport), and it stays in the same place even when the page is scrolled.</li>
+            <pre><code>div {
+    position: fixed;
+    top: 0;
+    right: 0;
+}</code></pre>
+            <p>This example fixes the <code>&lt;div&gt;</code> element at the top-right corner of the page, and it will remain in that position even when the user scrolls.</p>
+
+            <li><strong>sticky:</strong> An element with <code>position: sticky;</code> toggles between relative and fixed, depending on the user's scroll position. It acts as a relative element until a specified scroll position is reached, at which point it becomes fixed.</li>
+            <pre><code>div {
+    position: sticky;
+    top: 0;
+}</code></pre>
+            <p>This example makes the <code>&lt;div&gt;</code> element "stick" to the top of the page when the user scrolls past it, but it behaves as a relatively positioned element before the scroll position is reached.</p>
+        </ul>
+
+        <h3>Example of Position Usage:</h3>
+        <pre><code>div {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}</code></pre>
+        <p>This example positions the <code>&lt;div&gt;</code> element 50px from the top and 50px from the right of its nearest positioned ancestor.</p>
+    
+    <div class="button-container">
+      <a href="fonts.html" class="button button-previous">Previous Page</a>
+      <a href="overflow.html" class="button button-next">Next Page</a>
+    </div>
+    
+  </section>
+</main>
+
+  <footer>
+  <p>&copy; 2024 Web Development Tutorial</p>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Formatting and Quotations</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body class="html-formatting-page">
+  
+  <header>
+    <nav>
+      <h1>HTML Formatting and Quotations</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>Introduction to HTML Formatting</h2>
+      <p>HTML formatting tags help style text to improve readability and emphasize content. These tags are essential for making text meaningful and visually appealing on a webpage.</p>
+    </section>
+
+    <section id="basic-formatting">
+      <h2>Basic Formatting Tags</h2>
+      
+      <h3>Bold Text</h3>
+      <p><b>This is bold text using the &lt;b&gt; tag.</b></p>
+      <p><strong>This is important bold text using the &lt;strong&gt; tag.</strong></p>
+
+      <h3>Italic Text</h3>
+      <p><i>This is italic text using the &lt;i&gt; tag.</i></p>
+      <p><em>This is emphasized italic text using the &lt;em&gt; tag.</em></p>
+
+      <h3>Underlined Text</h3>
+      <p><u>This text is underlined using the &lt;u&gt; tag.</u></p>
+
+      <h3>Strikethrough Text</h3>
+      <p><s>This text is crossed out using the &lt;s&gt; tag.</s></p>
+    </section>
+
+    <section id="additional-formatting">
+      <h2>Additional Formatting Tags</h2>
+      
+      <h3>Subscript and Superscript</h3>
+      <p>Water's chemical formula is H<sub>2</sub>O using the &lt;sub&gt; tag.</p>
+      <p>Mathematics notation: x<sup>2</sup> using the &lt;sup&gt; tag.</p>
+
+      <h3>Monospace Text</h3>
+      <p><code>&lt;code&gt;</code> is often used for inline code snippets.</p>
+      <pre>
+        <code>
+        &lt;pre&gt; is used for larger code blocks.
+        function example() {
+          return "Hello World";
+        }
+        </code>
+      </pre>
+
+      <h3>Quote Text</h3>
+      <blockquote>"This is a blockquote using the &lt;blockquote&gt; tag."</blockquote>
+      <p><q>This is an inline quote using the &lt;q&gt; tag.</q></p>
+
+      <section id="html-quotations">
+        <h2>HTML Quotations</h2>
+  
+        <h3>Blockquote</h3>
+        <p>The <code>&lt;blockquote&gt;</code> tag is used for longer quotes, often with source attribution.</p>
+        <blockquote cite="https://www.example.com">
+          "The journey of a thousand miles begins with one step."
+          <footer>— Lao Tzu, <cite><a href="https://www.example.com">Ancient Wisdom</a></cite></footer>
+        </blockquote>
+  
+        <h3>Inline Quote</h3>
+        <p>The <code>&lt;q&gt;</code> tag is used for shorter, inline quotes within a paragraph.</p>
+        <p>As they say, <q cite="https://www.example.com">"Actions speak louder than words."</q> This statement highlights the importance of actions.</p>
+  
+        <h3>Citations</h3>
+        <p>The <code>&lt;cite&gt;</code> tag represents the title of a work or source, such as books, websites, or articles.</p>
+        <p>According to <cite>HTML: The Language of the Web</cite>, understanding HTML is fundamental to web development.</p>
+  
+        <h3>Abbreviation</h3>
+        <p>The <code>&lt;abbr&gt;</code> tag is used to define abbreviations or acronyms, with the full form displayed on hover.</p>
+        <p>Learning <abbr title="HyperText Markup Language">HTML</abbr> is the first step to building web pages.</p>
+  
+
+      <div class="button-container">
+        <a href="stylespage.html" class="button button-previous">Previous Page</a>
+        <a href="colors.html" class="button button-next">Next Page</a>
+      </div> 
+
+    </section>
+  </main>
+
+  <footer>
+    
+    <p>&copy; 2024 Web Development Tutorial</p>
+  </footer>
+</body>
+</html>

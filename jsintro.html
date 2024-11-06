@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Introduction</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>JavaScript Introduction</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+    
+    <main>
+    <section>
+        <h2>1. What is JavaScript?</h2>
+        <p>JavaScript is a dynamic, high-level programming language used primarily for creating interactive effects within web browsers. It is a core technology of the World Wide Web, alongside HTML and CSS. JavaScript enables you to add interactivity, animations, and complex behaviors to web pages. It allows the development of both client-side and server-side applications.</p>
+
+        <h3>Key Features of JavaScript:</h3>
+        <ul>
+            <li><strong>Client-Side Scripting:</strong> JavaScript can run directly in the web browser, allowing websites to respond to user actions without needing to reload the page.</li>
+            <li><strong>Dynamic Typing:</strong> JavaScript is dynamically typed, meaning you don't need to specify the type of variable when you declare it.</li>
+            <li><strong>Object-Oriented:</strong> JavaScript supports object-oriented programming (OOP) with concepts like objects, inheritance, and encapsulation.</li>
+            <li><strong>Asynchronous Programming:</strong> JavaScript supports asynchronous programming through mechanisms like callbacks, promises, and async/await.</li>
+            <li><strong>Event-Driven:</strong> JavaScript can respond to events like user clicks, mouse movements, or keyboard inputs, making it well-suited for interactive websites.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Where is JavaScript Used?</h2>
+        <p>JavaScript is widely used in web development for both frontend and backend applications. Below are some common use cases:</p>
+        
+        <ul>
+            <li><strong>Web Pages:</strong> Adding interactivity, validating forms, updating page content dynamically (AJAX), handling animations, etc.</li>
+            <li><strong>Web Applications:</strong> JavaScript frameworks and libraries like React, Angular, and Vue.js are used to create single-page applications (SPAs).</li>
+            <li><strong>Backend Development:</strong> With Node.js, JavaScript can be used on the server side to handle HTTP requests, interact with databases, and manage APIs.</li>
+            <li><strong>Mobile Applications:</strong> Frameworks like React Native allow developers to create cross-platform mobile applications using JavaScript.</li>
+            <li><strong>Games:</strong> JavaScript is used in game development, particularly with libraries like Phaser, for building 2D games that run in the browser.</li>
+            <li><strong>Browser Extensions:</strong> JavaScript is often used to create extensions for web browsers like Chrome, Firefox, and Edge.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. JavaScript Syntax</h2>
+        <p>The syntax of JavaScript defines the set of rules that govern how JavaScript programs are written. It is similar to other programming languages, with a few key differences:</p>
+
+        <h3>Variables:</h3>
+        <p>In JavaScript, you can declare variables using the <code>var</code>, <code>let</code>, or <code>const</code> keywords:</p>
+        <pre><code>let x = 10; // Declares a variable 'x' with the value 10
+const name = "Alice"; // Declares a constant 'name' with the value "Alice"
+var age = 25; // Declares a variable 'age' with the value 25 (older way)</code></pre>
+
+        <h3>Data Types:</h3>
+        <p>JavaScript supports various data types, including:</p>
+        <ul>
+            <li><strong>Numbers:</strong> Used for numerical values, both integers and floating-point numbers.</li>
+            <li><strong>Strings:</strong> Used for textual data, enclosed in single or double quotes.</li>
+            <li><strong>Booleans:</strong> Represents true or false values.</li>
+            <li><strong>Objects:</strong> Collections of properties or key-value pairs.</li>
+            <li><strong>Arrays:</strong> Ordered lists of values.</li>
+            <li><strong>Null:</strong> Represents a variable with no value.</li>
+            <li><strong>Undefined:</strong> Represents an uninitialized variable.</li>
+        </ul>
+
+        <h3>Functions:</h3>
+        <p>Functions are blocks of reusable code that can be invoked to perform a specific task. They can take parameters and return values.</p>
+        <pre><code>function greet(name) {
+    return "Hello, " + name;
+}
+
+let greeting = greet("Alice"); // Call the function and store the result
+console.log(greeting); // Output: Hello, Alice</code></pre>
+
+        <h3>Control Flow:</h3>
+        <p>Control flow structures allow you to dictate the execution of different parts of the code:</p>
+        <ul>
+            <li><strong>If-Else:</strong> Allows you to perform conditional checks.</li>
+            <pre><code>if (age > 18) {
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}</code></pre>
+
+            <li><strong>Loops:</strong> Repeats a block of code a certain number of times.</li>
+            <pre><code>for (let i = 0; i < 5; i++) {
+    console.log(i); // Prints numbers 0 to 4
+}</code></pre>
+        </ul>
+
+        <h3>Objects and Arrays:</h3>
+        <p>In JavaScript, objects are used to store collections of data, while arrays are used for ordered data structures.</p>
+
+        <h4>Object Example:</h4>
+        <pre><code>let person = {
+    name: "John",
+    age: 30,
+    greet: function() {
+        console.log("Hello, " + this.name);
+    }
+};
+person.greet(); // Output: Hello, John</code></pre>
+
+        <h4>Array Example:</h4>
+        <pre><code>let colors = ["red", "green", "blue"];
+console.log(colors[0]); // Output: red</code></pre>
+    </section>
+
+    <section>
+        <h2>4. JavaScript Events</h2>
+        <p>Events are actions or occurrences that happen in the system you are working with. In JavaScript, events are often user interactions such as clicking a button, moving the mouse, or submitting a form. You can attach event listeners to HTML elements to respond to these events.</p>
+
+        <h3>Event Listeners:</h3>
+        <p>Event listeners are functions that are called when an event is triggered. You can use the <code>addEventListener</code> method to bind an event to an HTML element:</p>
+        <pre><code>document.getElementById("myButton").addEventListener("click", function() {
+    alert("Button clicked!");
+});</code></pre>
+
+        <p>Common JavaScript events include:</p>
+        <ul>
+            <li><strong>click:</strong> Triggered when an element is clicked.</li>
+            <li><strong>mouseover:</strong> Triggered when the mouse pointer hovers over an element.</li>
+            <li><strong>keydown:</strong> Triggered when a key is pressed down.</li>
+            <li><strong>submit:</strong> Triggered when a form is submitted.</li>
+            <li><strong>load:</strong> Triggered when a webpage or image finishes loading.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>5. DOM Manipulation</h2>
+        <p>The Document Object Model (DOM) is a hierarchical representation of the HTML elements on a web page. JavaScript can interact with the DOM to modify the page’s content and structure dynamically.</p>
+
+        <h3>Accessing DOM Elements:</h3>
+        <p>JavaScript provides methods to access and manipulate DOM elements:</p>
+        <ul>
+            <li><code>document.getElementById("id")</code>: Selects an element by its ID.</li>
+            <li><code>document.getElementsByClassName("class")</code>: Selects elements by their class name.</li>
+            <li><code>document.getElementsByTagName("tag")</code>: Selects elements by their tag name.</li>
+            <li><code>document.querySelector("selector")</code>: Selects the first element that matches a CSS selector.</li>
+        </ul>
+
+        <h3>Modifying DOM Elements:</h3>
+        <p>Once an element is accessed, JavaScript can be used to modify its content or attributes:</p>
+        <pre><code>let element = document.getElementById("myDiv");
+element.innerHTML = "New content"; // Changes the inner HTML of the element
+element.style.color = "blue"; // Changes the text color</code></pre>
+
+        <h3>Creating New Elements:</h3>
+        <p>JavaScript can also create new HTML elements and append them to the DOM:</p>
+        <pre><code>let newElement = document.createElement("p");
+newElement.textContent = "This is a new paragraph.";
+document.body.appendChild(newElement); // Adds the new paragraph to the page</code></pre>
+
+  <div class="button-container">
+    <a href="output.html" class="button button-next">Next Page</a>
+  </div>
+
+    </section>
+  </main>
+
+  <footer>
+  <p>&copy; 2024 Web Development Tutorial</p>
+  </footer>
+
+</body>
+</html>
